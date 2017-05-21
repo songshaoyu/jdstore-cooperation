@@ -17,3 +17,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+
+// 网页字体
+
+body, button, input, select, textarea, code {
+    font-family: "Heiti SC","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",verdana;
+}
+// 排序
+ .sorts {
+    overflow: hidden;
+    padding: 20px 0;
+    line-height: 1;
+    border-top: 1px dashed #dedede;
+}
+.sorts a {
+  color: #dedede;
+}
+
+.sorts a:hover{
+        color: #b4a078;
+   }

@@ -1,6 +1,13 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = case params[:order]
+    when 'by_product_price'
+      Product.all.order("price DESC")
+    when 'by_product_quantity'
+      Product.all.order('quantity DESC')
+    else
+      Product.all.recent
+    end
   end
 
   def show

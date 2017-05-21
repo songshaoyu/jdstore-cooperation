@@ -30,11 +30,80 @@ body, button, input, select, textarea, code {
     padding: 20px 0;
     line-height: 1;
     border-top: 1px dashed #dedede;
+    margin-top: 100px;
 }
 .sorts a {
-  color: #dedede;
+  color: #333;
+}
+.default-view:visited {
+  color: #b4a078;
 }
 
 .sorts a:hover{
         color: #b4a078;
    }
+
+// 搜索框
+
+.products-search-form {
+  margin-top: 10px;
+  padding-left: 20px;
+  .search-bar {
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    padding-right: 40px;
+
+    .search-bar-input  {
+      min-width: 300px;
+      transition: 0.35s;
+    }
+  }
+}
+
+// common navbar
+.navbar-default {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: #414141;
+    .navbar-header {
+      margin-left: 9%;
+      a {
+        font-size: 20px;
+        color: #fff;
+        transition: 0.35s;
+      }
+      a:hover {
+        color: #D0CFCE;
+      }
+    }
+    .navbar-nav li a {
+      color: #fff;
+      font-size: 16px;
+      transition: 0.35s;
+    }
+    .navbar-nav li a:hover {
+      color: #D0CFCE;
+      text-decoration: none
+    }
+
+    .navbar-nav .dropdown-menu {
+      padding-bottom: 0;
+      padding-top: 0;
+      a {
+        text-align: center;
+        color: #000;
+      }
+      li.divider:last-child {
+        display: none;
+      }
+    }
+    .login {
+      border: 1px solid #fff;
+      margin-top: 12px;
+      padding: 3px 17px 3px 17px;
+      margin-right: 130px;
+      border-radius: 15px;
+    }
+
+ }

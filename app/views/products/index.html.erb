@@ -1,3 +1,12 @@
+<!-- 类别 -->
+<ul class="tab-nav">
+  
+  <% Category.all.each do |category| %>
+  <li class="nav-item">
+      <%= link_to(category.name, products_path(category: category.name)) %>
+  </li>
+  <% end %>
+</ul>
 
 <!-- 排序  -->
 <div class="sorts" data-reactid=".0.0.2">

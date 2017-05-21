@@ -107,3 +107,26 @@ body, button, input, select, textarea, code {
     }
 
  }
+
+ // 类别
+    .tab-nav{
+      float: left;
+      margin-top: 56px;
+      line-height: 1;
+      height: 30px;
+      position: relative;
+      width: 100%;
+    }
+    .nav-item {
+    float: left;
+    padding: 6px 30px 0;
+    font-size: 14px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+ .first {
+     margin-left: 12px;
+     padding-left: 30px;
+ }

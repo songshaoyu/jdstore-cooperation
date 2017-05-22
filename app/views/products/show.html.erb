@@ -1,3 +1,5 @@
+
+<div class="container product-show">
 <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
@@ -19,12 +21,24 @@
     <div class="product-price">
       ¥ <%= @product.price %>
     </div>
-    <div class="pull-right">
+    <!-- 开始改动，为了实现收藏 -->
+    <div class="col-sm-6">
       <% if @product.quantity.present? && @product.quantity > 0 %>
         <%= link_to("加入购物车", add_to_cart_product_path(@product),method: :post, :class => "btn btn-primary btn-lg btn-danger") %>
       <% else %>
       已销售一空，无法购买
       <% end %>
     </div>
+
+    <!-- 收藏商品按钮 -->
+    <div class="col-sm-6 product-collection">
+         <% if current_user && current_user.is_member_of?(@product) %>
+           <%= link_to("已收藏", quit_product_path(@product), method: :post, class: "btn btn-default") %>
+         <% else %>
+           <%= link_to("收藏商品", join_product_path(@product), method: :post, class: "btn btn-default") %>
+         <% end %>
+       </div>
+     </div>
+
   </div>
 </div>

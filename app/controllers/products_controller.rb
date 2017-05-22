@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
+  before_action :authenticate_user! , only: [:join, :quit]
   def index
     @products = case params[:order]
     when 'by_product_price'
@@ -31,6 +32,33 @@ class ProductsController < ApplicationController
        @products = search_params
      end
    end
+  #  收藏
+  def join
+   @product = Product.find(params[:id])
+
+    if !current_user.is_member_of?(@product)
+      current_user.join!(@product)
+      flash[:notice] = "收藏成功！"
+    else
+      flash[:warning] = "你已经收藏了！"
+    end
+
+    redirect_to product_path(@product)
+  end
+
+  def quit
+    @product = Product.find(params[:id])
+
+    if current_user.is_member_of?(@product)
+      current_user.quit!(@product)
+      flash[:alert] = "取消收藏！"
+    else
+      flash[:warning] = "你没有收藏，怎么取消 XD"
+    end
+
+    redirect_to product_path(@product)
+  end
+
 
   protected
 

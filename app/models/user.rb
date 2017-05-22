@@ -9,4 +9,18 @@ class User < ApplicationRecord
   end
 
   has_many :orders
+  has_many :products
+  has_many :participated_products, :through => :collections, :source => :product
+  has_many :collections
+  def is_member_of?(product)
+    participated_products.include?(product)
+  end
+
+  def join!(product)
+   participated_products << product
+ end
+
+ def quit!(product)
+   participated_products.delete(product)
+ end
 end

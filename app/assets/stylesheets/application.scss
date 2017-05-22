@@ -110,16 +110,16 @@ body, button, input, select, textarea, code {
  }
 
 //---------- footer---
-
-footer {
-  height: 70px;
-  background-color: #414141;
-  p {
-    padding-top: 15px;
-    padding-bottom: 30px;
-    color: white;
-  }
-}
+//
+// footer {
+//   height: 70px;
+//   background-color: #414141;
+//   p {
+//     padding-top: 15px;
+//     padding-bottom: 30px;
+//     color: white;
+//   }
+// }
 
 
 // landing page container 页面内容 ↓↓↓------
@@ -160,9 +160,6 @@ footer {
 .categories-box {
   background-color: #F5F5F5;
   text-align: center;
-=======
-
-
 
   a {
     text-decoration:none;
@@ -197,6 +194,7 @@ footer {
 }
 
 
+
  // 类别
     .tab-nav{
       float: left;
@@ -222,7 +220,7 @@ li {
 
  //--footer
  .footer-fixed {
-  background-color: #404040;
+  background-color: rgb(245,245,245);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -249,7 +247,7 @@ li {
     text-align: center;
 }
 .m-siteEnsure .item .inner {
-    color: rgba(252,252,252, 0.8);
+    color: rgba(106,102,102, 0.8);
     font-size: 18px;
     line-height: 51px;
     display: inline-block;
@@ -266,11 +264,10 @@ li {
  body {
 
      margin-bottom: 100px;                              // footer固定底部
-     display: flex;                                      // footer固定底部
-     flex-direction: column;                             // footer固定底部
+    //  display: flex;                                      // footer固定底部
+    //  flex-direction: column;                             // footer固定底部
      padding-top: 30px;                                  // 腾出navbar的遮挡空间
      color: #666;                                        // 修改全站的 字体主色
      font-size: 1.2em;                                   // 网站所有字体缩小比例
 
   }
-

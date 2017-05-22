@@ -107,32 +107,14 @@ body, button, input, select, textarea, code {
     }
 
  }
-<<<<<<< HEAD
-//---------- footer---
 
-footer {
-  height: 70px;
-  background-color: #414141;
-  p {
-    padding-top: 15px;
-    padding-bottom: 30px;
-    color: white;
-  }
-}
-//  首页
-
-body {
-  color: #2E2E2E;
-  font-family: "Microsoft Yahei",verdana;
-  background: #FFFFFF;
-}
 
 // 第一块儿
 
 .jumbotron {
   background-image: image-url("7.jpg");
 }
-=======
+// =======
 
  // 类别
     .tab-nav{
@@ -156,4 +138,57 @@ li {
      margin-left: 12px;
      padding-left: 30px;
  }
->>>>>>> master
+
+ //--footer
+ .footer-fixed {
+  background-color: #404040;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+}
+.footer-fixed h5 {
+  margin-top: 2em;
+  font-size: 1.6em;
+}
+.footer-fixed-p {
+  text-align: justify;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+}
+
+ .m-siteEnsure {
+    margin-bottom: 30px;
+    list-style: none;
+}
+.m-siteEnsure .item {
+    float: left;
+    width: 33.333333%;
+    text-align: center;
+}
+.m-siteEnsure .item .inner {
+    color: rgba(252,252,252, 0.8);
+    font-size: 18px;
+    line-height: 51px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// 整体
+
+ html {
+
+     position: relative;
+       min-height: 100%;
+    }
+ body {
+
+     margin-bottom: 100px;                              // footer固定底部
+     display: flex;                                      // footer固定底部
+     flex-direction: column;                             // footer固定底部
+     padding-top: 30px;                                  // 腾出navbar的遮挡空间
+     color: #666;                                        // 修改全站的 字体主色
+     font-size: 1.2em;                                   // 网站所有字体缩小比例
+
+  }

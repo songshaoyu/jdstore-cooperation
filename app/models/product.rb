@@ -3,4 +3,7 @@ class Product < ApplicationRecord
 
   scope :recent, -> { order("created_at DESC") }
   belongs_to :category
+
+  has_many :collections
+  has_many :members, through: :collections, source: :user
 end

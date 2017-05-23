@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require 'masonry/transitions'
  *= require_self
  */
 
@@ -108,13 +109,91 @@ body, button, input, select, textarea, code {
 
  }
 
+//---------- footer---
+//
+// footer {
+//   height: 70px;
+//   background-color: #414141;
+//   p {
+//     padding-top: 15px;
+//     padding-bottom: 30px;
+//     color: white;
+//   }
+// }
 
-// 第一块儿
 
-.jumbotron {
-  background-image: image-url("7.jpg");
+// landing page container 页面内容 ↓↓↓------
+
+
+
+/*=====第一块 轮播在 welcome scss=====*/
+
+
+
+
+/*===== 第二块  精选科技=====*/
+.show-box {
+  text-align: center;
+  padding: 50px 0 50px 0;
+
+  img {
+    width: 100%;
+  }
+
+  .box {
+	  margin-top: 15px;
+	  box-shadow: 1px 1px 1.5px #ccc;
+	}
+
+  .three {
+    margin-top: 12px;
+  }
+
+  .box:hover {
+    opacity: 0.85;
+  }
 }
-// =======
+/*===== 以上 =====*/
+
+
+/*===== 第三块 首页-商品分类 三块灰的 =====*/
+.categories-box {
+  background-color: #F5F5F5;
+  text-align: center;
+
+  a {
+    text-decoration:none;
+    color: #002E2E;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  /*===== Content 分类內容 =====*/
+  .category-content {
+    padding: 50px 0 0 0;
+
+    border-right: 2.5px dashed #ccc;
+    /*===== Box 分类图片 =====*/
+    h3 {
+      padding: 20px 0 20px 0;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    p {
+      text-align: justify;
+      letter-spacing: 1.5px;
+      padding: 0 62.5px 50px 62.5px;
+      color: #666;
+      line-height: 26px;
+
+    }
+  }
+}
+
+
 
  // 类别
     .tab-nav{
@@ -141,7 +220,7 @@ li {
 
  //--footer
  .footer-fixed {
-  background-color: #404040;
+  background-color: rgb(245,245,245);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -168,7 +247,7 @@ li {
     text-align: center;
 }
 .m-siteEnsure .item .inner {
-    color: rgba(252,252,252, 0.8);
+    color: rgba(106,102,102, 0.8);
     font-size: 18px;
     line-height: 51px;
     display: inline-block;
@@ -185,8 +264,8 @@ li {
  body {
 
      margin-bottom: 100px;                              // footer固定底部
-     display: flex;                                      // footer固定底部
-     flex-direction: column;                             // footer固定底部
+    //  display: flex;                                      // footer固定底部
+    //  flex-direction: column;                             // footer固定底部
      padding-top: 30px;                                  // 腾出navbar的遮挡空间
      color: #666;                                        // 修改全站的 字体主色
      font-size: 1.2em;                                   // 网站所有字体缩小比例

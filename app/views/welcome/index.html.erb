@@ -1,44 +1,161 @@
+<!-- ↓↓↓ 大图滚动banner 代码块↓↓↓ -->
+  <div class="row">
+    <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+      <div class="overlay"></div>
 
-	<div class="lp-banner">
-	  <div class="jumbotron">
-	    <div class="text-center">
-	      <h2 class="jumbotron-title">每个程序员都有科技心</h2>
-	      <p class="jumbotron-slogan">
-	        极客范，科技心
-	      </p>
-	      <p class="jumbotron-lead"><a class="btn-lg lp-b-btn" href="/products">
-	      	立刻选购</a>
-	      </p>
-	    </div>
-	  </div>
-	</div>
+      <!-- 默认三张图列表 -->
+      <div class="banner">
+        <ul class="carousel-indicators ">
+          <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#bs-carousel" data-slide-to="1"></li>
+          <li data-target="#bs-carousel" data-slide-to="2"></li>
+        </ul>
+      </div>
+
+      <!-- 文案部分 -->
+      <div class="carousel-inner">
+        <div class="item slides active">
+          <div class="slide-1"></div>
+          <div class="hero row">
+            <hgroup>
+                <h1>你关注的 都在这里</h1>
+                <h3>每个程序员都有科技心 打造自己的开发环境</h3>
+            </hgroup>
+            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-2"></div>
+          <div class="hero">
+            <hgroup>
+                <h1>极客范，科技心</h1>
+                <h3>网罗科技新品 带你领略科技潮流</h3>
+            </hgroup>
+            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-3"></div>
+          <div class="hero">
+            <hgroup>
+                <h1>立即选购</h1>
+                <h3>查看更智能高效的生活工作方式</h3>
+            </hgroup>
+            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- ↑↑↑ 大图滚动banner 代码块 ↑↑↑ -->
 
 
-  <div class="lp-products pt60 pb60 lp-bg-gray">
-		  <h3 class="text-center">精选科技</h3>
-      
-	</div>
 
 
 
 
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+<!--===== 精选科技 =====-->
+  <section class="show-box">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2><%= t('精选科技') %></h2>
+        <div class="short-line"></div>
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="box">
+              <%= link_to '' do %><%= image_tag("item_1.jpg") %><% end %>
+            </div>
+            <div class="box">
+              <%= link_to '' do %><%= image_tag("item_2.jpg") %><% end %>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="box">
+              <%= link_to '' do %><%= image_tag("item_3.jpg") %><% end %>
+            </div>
+            <div class="box">
+              <%= link_to '' do %><%= image_tag("item_4.jpg") %><% end %>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="box three">
+              <%= link_to '' do %><%= image_tag("item_5.jpg") %><% end %>
+            </div>
+            <div class="box three">
+              <%= link_to '' do %><%= image_tag("item_6.jpg") %><% end %>
+            </div>
+            <div class="box three">
+              <%= link_to '' do %><%= image_tag("item_7.jpg") %><% end %>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="box">
+              <%= link_to '' do %><%= image_tag("item_8.jpg") %><% end %>
+            </div>
+            <div class="box">
+              <%= link_to '' do %><%= image_tag("item_9.jpg") %><% end %>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!--===== 商品類型 =====-->
+  <section class="categories-box">
+    <div class="row">
+
+      <div class="col-md-4 category-content">
+        <%= link_to '' , class: "category_1" do %>
+          <div class="category-box">
+            <%= image_tag("目录-1.jpg") %>
+          </div>
+          <div>
+            <h3><%= t('认知升级') %></h3>
+            <p><%= t('思想和身体 总有一个要在路上 提升认知 已成为当代各行精英关注的重点 终身学习理念深入人心 身为持续进步的你 不可错过 ') %></p>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="col-md-4 category-content">
+        <%= link_to '' , class: "category_2" do %>
+          <div class="category-box">
+            <%= image_tag("目录-2.jpg") %>
+          </div>
+          <div>
+            <h3><%= t('科技配件') %></h3>
+            <p><%= t('精心为程序员配选的配件 精品键盘 显示器 支架 高端科技用品 大大提升工作效率') %></p>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="col-md-4 category-content">
+        <%= link_to '' , class: "category_3" do %>
+          <div class="category-box">
+            <%= image_tag("目录-3.jpg") %>
+          </div>
+          <div>
+            <h3><%= t('功能食品') %></h3>
+            <p><%= t('程序员的脑力精力损耗大 加班熬夜家常便饭，补充能量 强身醒脑的食物已成为 程序员的强大支柱 对自己好一点') %></p>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </section>
 
 
 
+
+<!-- 我们的优势 -->
 
   <div class="lp-advantage pt60 pb60">
 		<h2 class="text-center">我们的优势</h2>
@@ -56,7 +173,7 @@
 					<div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
 						<img class="lp-advantage-img" src="">
 						<p class="lp-advantage-title f18 mt20">保证到户安装妥当</p>
-						<p class="lp-advantage-desc f14 pl20 pr20 mt30">不用担心您的桌面设置，我们将会有专业的团队协作您打造您的专属极客空间</p>
+						<p class="lp-advantage-desc f14 pl20 pr20 mt30">不用担心您的环境设置，我们将会有专业的团队协作您打造您的专属极客空间</p>
 					</div>
 				</div>
 				<div class="col-md-4">

@@ -12,10 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
-//= require masonry/jquery.masonry
+
 
 $(function(){
     var $pins = $('#pins');

@@ -30,3 +30,11 @@ Product.create!(title: "Cherry Keyboard",
       quantity: 5,
       image: open("http://img.benq.cn/20161021/48823/20161021_48823_430_283.jpg")
       )
+
+      Product.create!(title: "智能读屏台灯",
+         description: "明基WiT智能读屏台灯，专为阅读屏幕而生，妈妈再也不用担心我熬夜伤眼睛了",
+         price: 1899,
+         quantity: 5,
+         category_id: 1,
+         image: open("http://img.benq.cn/20161021/48823/20161021_48823_430_283.jpg")
+         )

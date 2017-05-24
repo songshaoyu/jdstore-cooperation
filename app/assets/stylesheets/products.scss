@@ -10,6 +10,66 @@
 }
 
 
+
+// 商品价格样式
+.product-price-bgcolor {
+  background-color: #f5f5f5;
+  padding: 1.5em 1em;
+  margin-bottom: 1em;
+}
+.product-price {
+  font-size: 3em;
+  color: #7f8c8d;
+  font-weight: lighter;
+}
+
+
+//商品库存样式
+.product-quantity {
+  margin: 1.5em auto;
+}
+
+//商品详情区域样式
+.product-particulars {
+  margin: 1.1em 0 3em;
+}
+.product-particulars-box {
+  border: 1px solid #e3e3e3;
+  border-top: none;
+  padding: 2em 1.2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 1.6em;
+  img {
+    max-width:100%;height:auto;             //重要样式代码，需要配合application.js的自适应代码块一起使用
+    }
+}
+
+// 商品品论区域样式
+.review-comment-form {
+  text-align: left;
+  padding: 2em 2em;
+}
+.review-comment-button {
+  text-align: left;
+  padding: 0 2em;
+  margin-top: -2em;
+}
+.reviews {
+  text-align: left;
+  li {
+    list-style: none;
+  }
+}
+.review-user-email {
+  font-weight: bold;
+}
+.review-comment {
+  margin: 1em auto;
+}
+.review-hr {
+  padding: 0 3em;
+=======
 #pins {
   margin: 0 auto;
   width: 100%;
@@ -119,4 +179,5 @@ font-size: 18px;
   span{
     font-size: 16px;
   }
+
 }

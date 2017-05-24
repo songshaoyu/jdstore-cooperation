@@ -34,7 +34,7 @@
             <!-- 开始改动，为了实现收藏 -->
             <div class="col-sm-6">
               <% if @product.quantity.present? && @product.quantity > 0 %>
-                <%= link_to("加入购物车", add_to_cart_product_path(@product),method: :post, :class => "btn btn-primary btn-lg btn-danger") %>
+                <%= link_to("加入购物车", add_to_cart_product_path(@product),method: :post, :class => "btn btn-primary btn-lg btn-lg") %>
               <% else %>
               已销售一空，无法购买
               <% end %>
@@ -54,18 +54,15 @@
 
 
 
-<!-- 商品详情区域 + 推荐展示 -->
-    <div class="container">
+<!-- 商品详情区域 -->
         <!-- 商品详情区域 + 商品评论区域 -->
-        <div class="col-md-9 product-particulars">
+      <div class="container">
+        <div class="col-md-8 product-particulars">
           <!-- 导航栏 -->
           <div class="row">
             <ul class="nav nav-tabs nav-justified">
               <li class="active">
                 <a href="#tab_default_1" data-toggle="tab">商品详情</a>
-              </li>
-              <li>
-                <a href="#tab_default_2" data-toggle="tab">用户评价</a>
               </li>
             </ul>
           </div>
@@ -74,4 +71,4 @@
             <%= simple_format(@product.particulars) %>
           </div>
         </div>
-    </div>
+      </div>

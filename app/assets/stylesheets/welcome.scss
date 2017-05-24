@@ -17,17 +17,18 @@
     height: 616px;
 }
 .fade-carousel .carousel-indicators > li {            //滚动按钮的设置
-    width: 5px;
-    height: 5px;
+    width: 12px;
+    height: 12px;
     margin: 0 2px;
     background-color: #fff;
     opacity: 0.5;
 }
 .fade-carousel .carousel-indicators > li.active {     //当前滚动按钮的设置
-    width: 40px;
-    height: 5px;
+    width: 12px;
+    height: 12px;
     opacity: 0.8;
 }
+
 
 /*  --- 标题文字设置 ---  */
 .hero {

@@ -153,7 +153,7 @@ body, button, input, select, textarea, code {
     opacity: 0.85;
   }
 }
-/*===== 以上 =====*/
+/*===== end =====*/
 
 
 /*===== 第三块 首页-商品分类 三块灰的 =====*/
@@ -312,18 +312,18 @@ li {
   }
 
 
-  ///-----user----
+  ///-----登陆页面 背景图----
 
   .user_setup{
      margin: 0 relative;
      margin-top: -20px;
      height: 1000px;
 
-     background: image_url("user_setup.jpg") no-repeat scroll top center/ cover;
+     background: image_url("user_setup.jpg") no-repeat scroll top center/ cover;  //背景图
   }
 
 
-  // 商品show页
+  // 商品展示页
     .product-list-style {                                 //图片+文字 块样式整形
       margin: 2em auto 2em;
     }

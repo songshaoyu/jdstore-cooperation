@@ -20,17 +20,15 @@ u.save
 Product.create!(title: "Cherry Keyboard",
    description: "G80-3000键盘",
    price: 2800,
-   category: "科技配件",
    quantity: 5,
-   particulars: "数位生活 需要一盏符合现代阅读习惯的灯<br><br>应用场景<br><img alt=\"\" src=\"http://ww3.sinaimg.cn/large/006tKfTcgy1ffr52b0kiej30ue0mimz4.jpg\">",
+   particulars: "数位生活 需要一盏符合现代阅读习惯的灯<br><br>细节介绍<br><img alt=\"\" src=\"http://ww3.sinaimg.cn/large/006tKfTcgy1ffr52b0kiej30ue0mimz4.jpg\">",
    image: open("https://images-cn.ssl-images-amazon.com/images/I/41LN-bXtA7L._AC_UL320_SR320,320_.jpg")
    )
 
 Product.create!(title: "WIT智能读屏台灯",
       description: "明基WiT智能读屏台灯，专为阅读屏幕而生，妈妈再也不用担心我熬夜伤眼睛了",
       price: 1899,
-      category: "科技配件",
       quantity: 5,
-      particulars: "数位生活 需要一盏符合现代阅读习惯的灯<br><br>应用场景<br><img alt=\"\" src=\"http://ww3.sinaimg.cn/large/006tKfTcgy1ffr52b0kiej30ue0mimz4.jpg\">",
+      particulars: "数位生活 需要一盏符合现代阅读习惯的灯<br><br>细节介绍<br><img alt=\"\" src=\"http://ww3.sinaimg.cn/large/006tKfTcgy1ffr52b0kiej30ue0mimz4.jpg\">",
       image: open("http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://mmbiz.qpic.cn/mmbiz_jpg/rvaGsRYwibgKe2dWN8MB0TGibia38VOJFoXtSTjZQ5uqIv1cNia01LAr0XicVaSN5G0W43InK3JE4gHQQ3lIyk8ooaA/0?wx_fmt=jpeg")
       )

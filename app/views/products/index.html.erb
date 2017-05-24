@@ -1,6 +1,9 @@
+<div class="container">
+
+
 <!-- 类别 -->
 <ul class="tab-nav">
-  
+
   <% Category.all.each do |category| %>
   <li class="nav-item">
       <%= link_to(category.name, products_path(category: category.name)) %>
@@ -22,5 +25,9 @@
 
 <!-- 教材 -->
 <div class="row">
-  <%= render :partial => "product_items", :collection => @products, :as => :product %>
+  <div id="pins" class="transitions-enabled">
+        <%= render :partial => "product_items", :collection => @products, :as => :product %>
+      </div>
+
 </div>
+<div>

@@ -1,0 +1,14 @@
+<h3 class="text-center">新类别</h3>
+<hr>
+
+<%= simple_form_for [:admin, @category] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: "类别名称" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

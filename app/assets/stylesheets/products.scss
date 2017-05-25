@@ -13,10 +13,10 @@
 #pins {
   margin: 0 auto;
   width: 100%;
-  .box {
+  .product-box {
      margin: 10px;
      width: 225px;
-     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+     product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
      text-align: center;
    padding: 0px;
      img {
@@ -78,7 +78,7 @@ font-size: 18px;
 
 .product-show img{
  width: 100%;
- height: 200px;
+ // height: 200px;
  display: inline-block;
  vertical-align: middle;
  -moz-transition: transform 10s;
@@ -106,15 +106,15 @@ font-size: 18px;
   }
 }
 
-.product-show .box {
+.product-show .product-box {
   padding-left: 0px;
   padding-right: 0px;
   margin-bottom: 10px;
   font-size: 20px;
   transition: 0.35s;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   &:hover{
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
+    product-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
   }
   span{
     font-size: 16px;

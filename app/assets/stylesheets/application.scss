@@ -161,6 +161,7 @@ body, button, input, select, textarea, code {
 
 /*===== 第三块 首页-商品分类 三块灰的 =====*/
 .categories-box {
+  margin: 15px;
   background-color: #F5F5F5;
   text-align: center;
 
@@ -171,13 +172,15 @@ body, button, input, select, textarea, code {
 
   img {
     width: 300px;
+    height: 200px;
+    border-radius: 4px;
   }
 
   /*===== Content 分类內容 =====*/
   .category-content {
     padding: 50px 0 0 0;
 
-    border-right: 2.5px dashed #ccc;
+    // border-right: 2.5px dashed #ccc;
     /*===== Box 分类图片 =====*/
     h3 {
       padding: 20px 0 20px 0;

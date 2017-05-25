@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require masonry/jquery.masonry
-//= require turbolinks
+
 //= require bootstrap
 //= require_tree .
 
@@ -23,7 +23,7 @@ $(function(){
     $pins.imagesLoaded(function(){
       // $box.fadeIn();
       $pins.masonry({
-        itemSelector : '.box',
+        itemSelector : '.product-box',
         isFitWidth: true,
       });
     });

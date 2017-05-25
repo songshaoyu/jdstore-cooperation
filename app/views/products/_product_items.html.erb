@@ -1,7 +1,7 @@
 
     <div id="pins" class="transitions-enabled">
 
-      <div class="box">
+      <div class="product-box">
         <%= link_to product_path(product) do %>
           <% if product.image.present? %>
           <%= image_tag(product.image.thumb.url, :class => "thumbnail") %>
@@ -9,7 +9,10 @@
          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
         <% end %>
         <% end %>
-        <%= product.title %> ¥ <%= product.price %>
+        <%= product.title %>
+        <br>
+         ¥ <%= product.price %>
       </div>
-    
+
+
     </div>

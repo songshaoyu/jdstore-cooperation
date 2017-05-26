@@ -293,3 +293,41 @@ body, button, input, select, textarea, code {
   }
 
   }
+
+  // 关于我们的小按钮
+  .label {
+   font-weight: normal;
+}
+
+.label-competition-new {
+   left: 32px;
+   background-color: #C30B1C;
+}
+
+.label-meetup {
+   position: absolute;
+   top: 2px;
+   left: 48px;
+   padding: 3px 5px;
+   -webkit-padding-before: 3px;
+   -webkit-padding-end: 5px;
+   -webkit-padding-after: 3px;
+   -webkit-padding-start: 5px;
+   font-size: 12px;
+   transform: scale(0.833);
+   border-radius: 10px;
+    background-color: #C30B1C;
+}
+
+.label {
+   display: inline;
+   padding: .2em .6em .3em;
+   font-size: 75%;
+   font-weight: bold;
+   line-height: 1;
+   color: #fff;
+   text-align: center;
+   white-space: nowrap;
+   vertical-align: baseline;
+   border-radius: .25em;
+}

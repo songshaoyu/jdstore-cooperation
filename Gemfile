@@ -40,6 +40,7 @@ gem 'aasm'
 gem 'ransack'
 gem 'seo_helper'
 gem 'masonry-rails'
+gem 'bootstrap-wysihtml5-rails'
 
 
 group :development, :test do

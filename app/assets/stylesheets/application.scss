@@ -18,6 +18,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 
 
 // 网页字体
@@ -126,12 +127,12 @@ body, button, input, select, textarea, code {
 
 
 
-/*=====第一块 轮播在 welcome scss=====*/
+/*===== 轮播在 welcome scss=====*/
 
 
 
 
-//----------- 精选科技 -------------//
+//----------- 第二块 精选科技 -------------//
 section {
     padding: 100px 0;
     background: #E0E0E0;
@@ -177,42 +178,52 @@ section h2 {
 /*===== end =====*/
 
 
-/*===== 第三块 首页-商品分类 三块灰的 =====*/
-.categories-box {
-  background-color: #fff;
-  text-align: center;
-
-  a {
-    text-decoration:none;
-    color: #002E2E;
-  }
-
-  img {
-    width: 300px;
-  }
-
-  /*===== Content 分类內容 =====*/
-  .category-content {
-    padding: 50px 0 0 0;
-
-    border-right: 10px dashed #ffffff;  //中间虚线的厚度 和 颜色
-    /*===== Box 分类图片 =====*/
-    h3 {
-      padding: 20px 0 20px 0;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    p {
-      text-align: justify;
-      letter-spacing: 1.5px;
-      padding: 0 62.5px 50px 62.5px;
-      color: #666;
-      line-height: 30px;
-
-    }
-  }
+/*===== 第三块 首页-精选分类 三块灰的 =====*/
+div.section {
+  display: inline-block;
+  vertical-align: top;
 }
+
+div.gallery {
+  width: 66%;
+  float: left;
+  margin-top: 10px;
+  margin-left: 17%;   //整体左右
+}
+
+.gallery div {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 3px;
+}
+
+.gallery div:nth-child(1),
+.gallery div:nth-child(2) {
+  width:49%;
+}
+
+.gallery div:nth-child(3),
+.gallery div:nth-child(4),
+.gallery div:nth-child(5){
+  width:32.6%;
+}
+
+.gallery div img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+
+.gallerypage {
+  margin-top: 50px;
+}
+
+.gallerypage h3 {
+  margin-left: 200px;
+}
+
+
+
 
  // 类别
     .tab-nav{
@@ -353,7 +364,7 @@ li {
     }
 
 
-    //----------- 我们的优势 ------------//
+    //----------- 优势 ------------//
 
     .lp-advantage pt60 pb60 {
       background: #E0E0E0;

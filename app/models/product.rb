@@ -7,4 +7,5 @@ class Product < ApplicationRecord
   has_many :collections
   has_many :members, through: :collections, source: :user
 
+  has_many :reviews, dependent: :destroy
 end

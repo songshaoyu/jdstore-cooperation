@@ -1,5 +1,5 @@
 class Admin::ProductsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :index]
   before_action :admin_required
   layout 'admin'
   def index
@@ -35,6 +35,13 @@ class Admin::ProductsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+      redirect_to admin_products_path
+  end
+
 
   private
 

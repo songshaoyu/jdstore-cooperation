@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   devise_for :users
   resources :carts do
     collection do
@@ -33,6 +34,7 @@ Rails.application.routes.draw do
     collection do
       get :search
     end
+    resources :reviews
   end
 
   resources :cart_items

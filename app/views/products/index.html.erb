@@ -2,23 +2,24 @@
 
 
 <!-- 类别 -->
-<ul class="tab-nav">
-
+<div class="categoryProducts">
+  <span class="name">商品分类：</span>
   <% Category.all.each do |category| %>
-  <li class="nav-item">
-      <%= link_to(category.name, products_path(category: category.name)) %>
-  </li>
+
+    <span>
+        <%= link_to(category.name, products_path(category: category.name), :class => "categoryItem") %>
+    </span>
   <% end %>
-</ul>
+</div>
 
 <!-- 排序  -->
 <div class="sorts" data-reactid=".0.0.2">
   <span class="name">商品排序：</span>
 
-  <span><%= link_to("默认", products_path, class: "default-view") %></span>
+  <span><%= link_to("默认", products_path, class: "default-view categoryItem") %></span>
 
-  <span><%= link_to("价格", products_path(:order => "by_product_price")) %></span>
-  <span><%= link_to("销量", products_path(:order => "by_product_quantity")) %></span>
+  <span><%= link_to("价格", products_path(:order => "by_product_price"), class: "categoryItem") %></span>
+  <span><%= link_to("销量", products_path(:order => "by_product_quantity"), class: "categoryItem") %></span>
   <!-- <span><%= link_to("上架时间",'#') %></span> -->
 
 </div>

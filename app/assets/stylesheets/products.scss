@@ -10,7 +10,6 @@
 }
 
 
-<<<<<<< HEAD
 
 // 商品价格样式
 .product-price-bgcolor {
@@ -70,28 +69,29 @@
 }
 .review-hr {
   padding: 0 3em;
-=======
->>>>>>> d778f99121e359beb5597eb20c378647d4355c4b
+}
+
 #pins {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 100%;
-<<<<<<< HEAD
+
   .aa {
-=======
+
   .product-box {
->>>>>>> develop
-     margin: 10px;
+
+    //  margin: 10px;
      width: 225px;
      product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
      text-align: center;
    padding: 0px;
      img {
+       margin-right: 10px;
        max-width: 100%;
        height: auto;
      }
    }
 }
-
+}
 // .product-show .col-md-4{
 //   padding-left: 5px;
 //   padding-right: 5px;
@@ -174,11 +174,11 @@ height: 428px;
   }
 }
 
-<<<<<<< HEAD
+
 .product-show .aa {
-=======
+
 .product-show .product-box {
->>>>>>> develop
+
   padding-left: 0px;
   padding-right: 0px;
   margin-bottom: 10px;
@@ -191,4 +191,5 @@ height: 428px;
   span{
     font-size: 16px;
   }
+}
 }

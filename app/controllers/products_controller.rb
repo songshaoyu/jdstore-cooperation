@@ -32,6 +32,7 @@ class ProductsController < ApplicationController
     redirect_to :back
   end
 
+
   def search
      if @query_string.present?
        @products = search_params

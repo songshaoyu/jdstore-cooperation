@@ -10,23 +10,17 @@
               </li>
               <% end %>
             </ul>
-
             <!-- 排序  -->
             <div class="sorts" data-reactid=".0.0.2">
               <span class="name">商品排序：</span>
-
               <span><%= link_to("默认", products_path, class: "default-view") %></span>
-
               <span><%= link_to("价格", products_path(:order => "by_product_price")) %></span>
               <span><%= link_to("销量", products_path(:order => "by_product_quantity")) %></span>
               <!-- <span><%= link_to("上架时间",'#') %></span> -->
-
             </div>
-
             <!-- 教材 -->
             <div class="row">
               <%= render :partial => "product_items", :collection => @products, :as => :product %>
             </div>
-
   </div>   <!--加了个盖-->
 </div>

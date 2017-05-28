@@ -10,15 +10,17 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require 'masonry/transitions'
+ *= require 'masonry/infinitescroll'
+
+ *= require_tree .
+
  *= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 
 
 // 网页字体
@@ -26,6 +28,39 @@
 body, button, input, select, textarea, code {
     font-family: "Heiti SC","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",verdana;
 }
+
+// 类别
+   .categoryProducts{
+
+     float: left;
+     margin-top: 20px;
+     line-height: 6;
+     height: 30px;
+     position: relative;
+     width: 100%;
+     border-top: 1px dashed #dedede;
+   }
+   .name {
+   font-size: 14px;
+   color: #999;
+   float: left;
+   margin-right: 22px;
+}
+   .categoryItem {
+     float: left;
+      margin-right: 30px;
+      margin-bottom: 16px;
+      font-size: 14px;
+  }
+
+
+  .categoryProducts a {
+    color: #333;
+  }
+
+.categoryProducts a:hover{
+        color: #b4a078;
+   }
 // 排序
  .sorts {
     overflow: hidden;
@@ -33,6 +68,7 @@ body, button, input, select, textarea, code {
     line-height: 1;
     border-top: 1px dashed #dedede;
     margin-top: 100px;
+        border-bottom: 1px solid #eaeaea;
 }
 .sorts a {
   color: #333;
@@ -100,127 +136,89 @@ body, button, input, select, textarea, code {
         display: none;
       }
     }
-    .login {
-      border: 1px solid #fff;
-      margin-top: 12px;
-      padding: 3px 17px 3px 17px;
-      margin-right: 130px;
-      border-radius: 15px;
-    }
-
  }
 
-//---------- footer---
-//
-// footer {
-//   height: 70px;
-//   background-color: #414141;
-//   p {
-//     padding-top: 15px;
-//     padding-bottom: 30px;
-//     color: white;
-//   }
-// }
+
 
 
 // landing page container 页面内容 ↓↓↓------
 
 
 
-/*===== 轮播在 welcome scss=====*/
+/*=====第一块 轮播在 welcome scss=====*/
 
 
 
 
-//----------- 第二块 精选科技 -------------//
-section {
-    padding: 100px 0;
-    background: #E0E0E0;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
-}
+/*===== 第二块  精选科技=====*/
+.show-box {
+  text-align: center;
+  padding: 50px 0 50px 0;
 
-#portfolio * {
-    z-index: 2;
-}
-
-section h2 {
-    margin: 0;
-    font-size: 2em;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-
-}
-#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
-    margin-top: -12px;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
-    position: absolute;
+  img {
     width: 100%;
-    height: 20px;
-    font-size: 20px;
-    text-align: center;
-    top: 50%;
-    margin-top: -12px;
-    color: #fff;
+  }
+
+  .box {
+	  margin-top: 15px;
+	  box-shadow: 1px 1px 1.5px #ccc;
+	}
+
+  .three {
+    margin-top: 12px;
+  }
+
+  .box:hover {
+    opacity: 0.85;
+  }
 }
 
-#portfolio .portfolio-item .portfolio-link {
-    display: block;
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
+/*=====  以上 =====*/
+
+/*===== 以上 =====*/
+
+
+
+/*===== 第三块 首页-商品分类 三块灰的 =====*/
+.categories-box {
+  margin: 15px;
+  background-color: #F5F5F5;
+  text-align: center;
+
+  a {
+    text-decoration:none;
+    color: #002E2E;
+  }
+
+  img {
+    width: 300px;
+    height: 200px;
+    border-radius: 4px;
+  }
+
+  /*===== Content 分类內容 =====*/
+  .category-content {
+    padding: 50px 0 0 0;
+
+    // border-right: 2.5px dashed #ccc;
+    /*===== Box 分类图片 =====*/
+    h3 {
+      padding: 20px 0 20px 0;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    p {
+      text-align: justify;
+      letter-spacing: 1.5px;
+      padding: 0 62.5px 50px 62.5px;
+      color: #666;
+      line-height: 26px;
+
+    }
+  }
 }
 
-.portfolio-item {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-/*===== end =====*/
-
-
-/*===== 第三块 首页-精选分类 三块灰的 =====*/
-div.section {
-  display: inline-block;
-  vertical-align: top;
-}
-
-div.gallery {
-  width: 66%;
-  float: left;
-  margin-top: 10px;
-  margin-left: 17%;   //整体左右
-}
-
-.gallery div {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 3px;
-}
-
-.gallery div:nth-child(1),
-.gallery div:nth-child(2) {
-  width:49%;
-}
-
-.gallery div:nth-child(3),
-.gallery div:nth-child(4),
-.gallery div:nth-child(5){
-  width:32.6%;
-}
-
-.gallery div img {
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-
-.gallerypage {
-  margin-top: 50px;
-}
-
-.gallerypage h3 {
-  margin-left: 200px;
-}
 
 
 
@@ -239,7 +237,8 @@ div.gallery {
     padding: 6px 30px 0;
     font-size: 14px;
 }
-li {
+// 解决冲突，加上父元素
+.tab-nav li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
@@ -247,6 +246,7 @@ li {
      margin-left: 12px;
      padding-left: 30px;
  }
+
 
  //--footer
  .footer-fixed {
@@ -292,15 +292,20 @@ li {
        min-height: 100%;
     }
  body {
-
-     margin-top: 20px;
+    margin-top: 20px;
      margin-bottom: 100px;                              // footer固定底部
     //  display: flex;                                      // footer固定底部
     //  flex-direction: column;                             // footer固定底部
      padding-top: 30px;                                  // 腾出navbar的遮挡空间
      color: #666;                                        // 修改全站的 字体主色
      font-size: 1.2em;                                   // 网站所有字体缩小比例
+     .content {
+    flex: 1;                                           // footer固定底部
   }
+
+  }
+
+
 
 
   /* 登陆页面 */
@@ -341,9 +346,10 @@ li {
     background-color: #233140;
   }
 
+
   ///-----登陆页面 背景图----
 
-  .user_setup{
+  .user_setup {
      margin: 0 relative;
      margin-top: -20px;
      height: 1000px;
@@ -363,80 +369,99 @@ li {
       margin-bottom: 3em;
     }
 
+  .label {
+   font-weight: normal;
+}
 
-    //----------- 优势 ------------//
+.label-competition-new {
+   left: 32px;
+   background-color: #C30B1C;
+}
 
+.label-meetup {
+   position: absolute;
+   top: 2px;
+   left: 48px;
+   padding: 3px 5px;
+   -webkit-padding-before: 3px;
+   -webkit-padding-end: 5px;
+   -webkit-padding-after: 3px;
+   -webkit-padding-start: 5px;
+   font-size: 12px;
+   transform: scale(0.833);
+   border-radius: 10px;
+    background-color: #C30B1C;
+}
+
+.label {
+   display: inline;
+   padding: .2em .6em .3em;
+   font-size: 75%;
+   font-weight: bold;
+   line-height: 1;
+   color: #fff;
+   text-align: center;
+   white-space: nowrap;
+   vertical-align: baseline;
+   border-radius: .25em;
+}
+
+//----------- 优势 ------------//
     .lp-advantage pt60 pb60 {
       background: #E0E0E0;
     }
-
     .pb60 {
         padding-bottom: 60px;
     }
-
     .pt60 {
         padding-top: 60px;
     }
-
     .lp .title {
         font-weight: normal;
     }
-
     .pb50 {
         padding-bottom: 50px;
     }
-
     .tc {
         text-align: center;
     }
-
     .pr20 {
         padding-right: 20px;
     }
-
     .pl20 {
         padding-left: 20px;
     }
-
     .bc {
         margin-left: auto !important;
         margin-right: auto !important;
     }
-
     .tc {
         text-align: center;
     }
-
     .lp-advantage .lp-advantage-img {
         width: 80px;
         height: 80px;
         border-radius: 50%;
     }
-
     img {
         vertical-align: middle;
         border: 0;
     }
-
     .lp-advantage .lp-advantage-title {
         color: #444;                //logo下面一行 字体的颜色
         line-height: 1.2;
     }
-
     .mt20 {
         margin-top: 20px;
     }
-
     .f18 {
         font-size: 18px;
     }
-
     .lp-advantage .lp-advantage-desc {
         line-height: 1.7;
         letter-spacing: 0;
         font-size: 16px;
     }
-
     .mt30 {
         margin-top: 30px;
     }

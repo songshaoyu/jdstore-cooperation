@@ -13,13 +13,13 @@
 
 // 商品价格样式
 .product-price-bgcolor {
-  background-color: #f5f5f5;
+  background-color: #f5f3ef;
   padding: 1.5em 1em;
   margin-bottom: 1em;
 }
 .product-price {
   font-size: 3em;
-  color: #7f8c8d;
+  color: #333333;
   font-weight: lighter;
 }
 
@@ -70,19 +70,17 @@
 .review-hr {
   padding: 0 3em;
 }
-
+//商品排版
 #pins {
   margin: 10px auto;
   width: 100%;
 
-  .aa {
-
   .product-box {
 
-    //  margin: 10px;
-     width: 225px;
+      margin: 10px;
+     width: 210px;
      product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-     text-align: center;
+     text-align: left;
    padding: 0px;
      img {
        margin-right: 10px;
@@ -91,7 +89,7 @@
      }
    }
 }
-}
+
 // .product-show .col-md-4{
 //   padding-left: 5px;
 //   padding-right: 5px;
@@ -190,6 +188,39 @@ height: 428px;
   }
   span{
     font-size: 16px;
+  }
+}
+}
+
+//试试智康的这段代码
+/*------商品展示页-----*/
+.product-content img {
+    width: 100%;
+    margin: 7.5px auto 7.5px auto;
+  }
+  .product-info {
+     text-align: left;
+     line-height: 14px;
+     min-height: 55px;
+   }
+.product-box {
+  text-align: center;
+  padding: 0 0 100px 0;
+  background: #F5F5F5;
+.background-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  p{
+    color: #e74c3c !important;
+  }
+  a{
+    color: #666 !important;
+  }
+  a:hover {
+  color: #e74c3c !important; //鼠标点击商品名称反馈
+  img {
+    opacity: 0.8; //鼠标放在图片上的显示
   }
 }
 }

@@ -1,13 +1,12 @@
-<h4>编辑商品</h4>
-<%= simple_form_for [:admin, @product] do |f| %>
-  <div class="group">
-    <%= f.input :title %>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="text-center">新增商品</h2>
 
-  <div class="group">
-    <%= f.input :description %>
-  </div>
-
+<<<<<<< HEAD
+      <hr>
+      <%= render "form" %>
+=======
   <div class="group">
     <%= f.input :quantity %>
   </div>
@@ -30,8 +29,8 @@
   <div class="group">
     <%= f.input :image, as: :file %>
   </div>
+>>>>>>> master
 
-  <div class="group">
-    <%= f.submit "Submit", data: { disable_with: "Submiting..."} %>
+    </div>
   </div>
-<% end %>
+</div>

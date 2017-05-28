@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20170527140541) do
+=======
 ActiveRecord::Schema.define(version: 20170522140543) do
+>>>>>>> master
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -54,6 +58,14 @@ ActiveRecord::Schema.define(version: 20170522140543) do
     t.index ["aasm_state"], name: "index_orders_on_aasm_state"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "group_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "product_lists", force: :cascade do |t|
     t.integer  "order_id"
     t.string   "product_name"
@@ -72,6 +84,18 @@ ActiveRecord::Schema.define(version: 20170522140543) do
     t.datetime "updated_at",  null: false
     t.string   "image"
     t.integer  "category_id"
+<<<<<<< HEAD
+    t.text     "particulars"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+=======
+>>>>>>> master
   end
 
   create_table "users", force: :cascade do |t|
@@ -88,6 +112,7 @@ ActiveRecord::Schema.define(version: 20170522140543) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "is_admin",               default: false
+    t.string   "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

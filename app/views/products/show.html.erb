@@ -30,6 +30,117 @@
       <% end %>
     </div>
 
+<<<<<<< HEAD
+            <div class="product-quantity">
+                  类别： <%= @product.category %>
+                </div>
+            <!-- 开始改动，为了实现收藏 -->
+            <div class="col-sm-6">
+              <% if @product.quantity.present? && @product.quantity > 0 %>
+                <%= link_to("加入购物车", add_to_cart_product_path(@product),method: :post, :class => "btn btn-primary btn-lg btn-lg") %>
+              <% else %>
+              已销售一空，无法购买
+              <% end %>
+            </div>
+  <!-- 收藏商品按钮 -->
+          <div class="col-sm-6 product-collection">
+               <% if current_user && current_user.is_member_of?(@product) %>
+                 <%= link_to("已收藏", quit_product_path(@product), method: :post, class: "btn btn-lg") %>
+               <% else %>
+                 <%= link_to("收藏商品", join_product_path(@product), method: :post, class: "btn btn-lg") %>  <!--收藏按钮 改成 btn-lg -->
+               <% end %>
+             </div>
+           </div>
+
+  </div>
+</div>
+
+
+
+<!-- 商品详情区域 -->
+        <!-- 商品详情区域 + 商品评论区域 -->
+      <div class="container">
+        <div class="col-md-7 product-particulars">
+          <!-- 导航栏 -->
+          <div class="row">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="active">
+                <a href="#tab_default_1" data-toggle="tab">商品详情</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 商品详情区域 -->
+          <div class="product-particulars-box row tab-pane active" id="tab_default_1">
+            <%= simple_format(@product.particulars) %>
+          </div>
+        </div>
+
+
+
+      <!-- 购物指南区 -->
+        <div class="col-md-5">
+          <div class="product-recommend">
+            <h5>购物指南</h5>
+            <hr>
+            <h6>配送费用</h6>
+            <p>凡是在本商购买的商品 均可享受免费配送服务。</p>
+            <hr>
+            <h6>支付方式</h6>
+            <p>支付宝支付
+              <br>
+              网银支付
+              <br>
+              微信支付
+              <br>
+              信用卡支付</p>
+            <hr>
+            <h6>售后保障</h6>
+            <p>如商品出现质量问题，极客生活馆将提供上门取送及原厂授权维修服务。
+                温馨提示：
+                售后到家服务仅针对部分指定商品，具体以客户下单时订单详情为准；
+                此服务仅限商城自营商品；
+                法定节假日、停电、天气等不可抗力情况除外。</p>
+            <hr>
+            <h6>促销活动</h6>
+            <p>您可以在商城首页“促销”或商品页面价格下方所提示的促销信息里面查看本店的最新活动。</p>
+          </div>
+        </div>
+
+      <!-- 商品评论区域 -->
+                  <div class="product-particulars-box row tab-pane" id="tab_default_2">
+                    <%= simple_form_for ([@product, @review]) do |f| %>
+                      <div class="review-comment-form">
+                        <%= f.input :content, :label => "在下方编辑您的评论" %>
+                      </div>
+                      <div class="review-comment-button">
+                        <%= f.submit "提交", class: "btn btn-primary btn-sm", data: {disable_with: "Submiting..."} %>
+                      </div>
+                    <% end %>
+                    <hr>
+                    <% if @reviews.blank? %>
+                      <p>该商品暂无评论</p>
+                    <% else %>
+                      <% @reviews.each do |review| %>
+                        <div class="reviews">
+                          <ul>
+                            <li>
+                              <div class="row">
+                                <div class="col-sm-9 review-user-email"><%= review.user.email %></div>
+                                <div class="col-sm-3"><%= review.created_at.strftime("%Y-%m-%d %H-%M-%S") %></div>
+                              </div>
+                              <div class="review-comment">
+                                <%= review.content %>
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="review-hr">
+                            <hr>
+                          </div>
+                        </div>
+                      <% end %>
+                    <% end %>
+                  </div>
+=======
     <!-- 收藏商品按钮 -->
     <div class="col-sm-6 product-collection">
          <% if current_user && current_user.is_member_of?(@product) %>
@@ -42,3 +153,4 @@
 
   </div>
 </div>
+>>>>>>> master

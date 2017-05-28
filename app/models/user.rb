@@ -12,6 +12,11 @@ class User < ApplicationRecord
   has_many :products
   has_many :participated_products, :through => :collections, :source => :product
   has_many :collections
+<<<<<<< HEAD
+  has_many :reviews, dependent: :destroy
+
+=======
+>>>>>>> master
   def is_member_of?(product)
     participated_products.include?(product)
   end

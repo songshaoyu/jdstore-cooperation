@@ -14,7 +14,11 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @reviews =  @product.reviews.order("created_at DESC")
+    @review = Review.new
   end
+
+
 
   def add_to_cart
     @product = Product.find(params[:id])
@@ -26,6 +30,7 @@ class ProductsController < ApplicationController
     end
     redirect_to :back
   end
+
 
   def search
      if @query_string.present?

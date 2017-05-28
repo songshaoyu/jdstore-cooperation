@@ -4,22 +4,29 @@
 
 // 页面调整
  .product-show {
-     margin-bottom: 2em;
+  margin-bottom: 2em;
   margin-top: 4em;
-
 }
 
 
 
 // 商品价格样式
 .product-price-bgcolor {
+<<<<<<< HEAD
+  background-color: #f5f3ef;  //价格框背景颜色
+=======
   background-color: #f5f3ef;
+>>>>>>> master
   padding: 1.5em 1em;
   margin-bottom: 1em;
 }
 .product-price {
   font-size: 3em;
+<<<<<<< HEAD
+  color: #333333;    //价格字体颜色
+=======
   color: #333333;
+>>>>>>> master
   font-weight: lighter;
 }
 
@@ -45,30 +52,55 @@
     }
 }
 
-// 商品品论区域样式
-.review-comment-form {
-  text-align: left;
-  padding: 2em 2em;
+//购物指南区域样式
+.product-recommend {
+  background-color: #f5f3ef;
+  border-radius: 4px;
+  margin: 1em 0 3em;
+  padding: 20px 50px 20px 50px;
+  line-height: 1.6em;
+  text-align: justify;
 }
-.review-comment-button {
-  text-align: left;
-  padding: 0 2em;
-  margin-top: -2em;
-}
-.reviews {
-  text-align: left;
-  li {
-    list-style: none;
+
+
+/*------商品展示页-----*/
+
+.product-content img {
+    width: 100%;
+    margin: 7.5px auto 7.5px auto;
+  }
+
+  .product-info {
+     text-align: left;
+     line-height: 14px;
+     min-height: 55px;
+   }
+
+.product-box {
+  text-align: center;
+  padding: 0 0 100px 0;
+  background: #F5F5F5;
+
+.background-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  p{
+    color: #e74c3c !important;
+  }
+
+  a{
+    color: #666 !important;
+  }
+
+  a:hover {
+  color: #e74c3c !important; //鼠标点击商品名称反馈
+
+  img {
+    opacity: 0.8; //鼠标放在图片上的显示
   }
 }
-.review-user-email {
-  font-weight: bold;
-}
-.review-comment {
-  margin: 1em auto;
-}
-.review-hr {
-  padding: 0 3em;
 }
 //商品排版
 #pins {

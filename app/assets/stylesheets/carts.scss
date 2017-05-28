@@ -1,3 +1,64 @@
 // Place all the styles related to the carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+// 整体样式
+.shoping-cart {
+  margin-top: 20px;
+  }
+
+// 清空购物车按钮
+  .clean_carts {
+    padding-top: 50px;
+  }
+
+// 列表表头样式
+.cart-column-head {
+  background: #BDBDBD;      //列表背景色
+  padding: 20px 0 20px 0;
+  margin-bottom: 20px;
+  color: #fff;              //字体颜色
+  label {
+    text-align: center;
+    line-height: 4px;
+  }
+}
+
+// 购物车商品
+.product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: auto;
+    width: 80px;
+  }
+}
+
+// 合计样式
+.product-price-totle {
+  font-size: 2em;
+  color: #7f8c8d;
+  font-weight: lighter;
+}
+
+// 提交按钮样式
+.cart-buying-buttom {
+  margin: 1.2em auto 3em;
+}
+
+
+.custab{
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}

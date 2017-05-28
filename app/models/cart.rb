@@ -4,8 +4,6 @@ class Cart < ApplicationRecord
 
   def add_product_to_cart(product)
     ci = cart_items.build
-
-
     ci.product = product
     ci.quantity = 1
     ci.save
@@ -19,6 +17,12 @@ class Cart < ApplicationRecord
       end
     end
     sum
+  end
+
+  def update_product_to_cart(product,quantity)
+    ci = cart_items.find_by(product)
+    ci.quantity = quantity
+    ci.save
   end
 
   def clean!

@@ -8,7 +8,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li> <%= link_to('Products', products_path) %> </li>
+            <li> <%= link_to('极客精选', products_path) %> </li>
+            <li><%= link_to("关于我们", '#') %>
+                           <span class="label label-meetup label-competition-new">待开发</span></li>
+
+
             <!-- 搜索 -->
             <li style= "margin-left:20px; width: 250px;">
             <%= form_tag search_products_path, :class => "products-search-form", :method => :get do %>

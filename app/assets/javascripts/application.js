@@ -12,17 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require masonry/jquery.masonry
+
 //= require bootstrap
 //= require_tree .
-//= require masonry/jquery.masonry
+
 
 $(function(){
     var $pins = $('#pins');
     $pins.imagesLoaded(function(){
       // $box.fadeIn();
       $pins.masonry({
-        itemSelector : '.box',
+        itemSelector : '.product-box',
         isFitWidth: true,
       });
     });

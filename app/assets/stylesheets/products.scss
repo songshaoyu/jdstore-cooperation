@@ -9,15 +9,24 @@
 }
 
 
+
 // 商品价格样式
 .product-price-bgcolor {
+<<<<<<< HEAD
   background-color: #f5f3ef;  //价格框背景颜色
+=======
+  background-color: #f5f3ef;
+>>>>>>> master
   padding: 1.5em 1em;
   margin-bottom: 1em;
 }
 .product-price {
   font-size: 3em;
+<<<<<<< HEAD
   color: #333333;    //价格字体颜色
+=======
+  color: #333333;
+>>>>>>> master
   font-weight: lighter;
 }
 
@@ -88,6 +97,160 @@
   a:hover {
   color: #e74c3c !important; //鼠标点击商品名称反馈
 
+  img {
+    opacity: 0.8; //鼠标放在图片上的显示
+  }
+}
+}
+//商品排版
+#pins {
+  margin: 10px auto;
+  width: 100%;
+
+  .product-box {
+
+      margin: 10px;
+     width: 210px;
+     product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+     text-align: left;
+   padding: 0px;
+     img {
+       margin-right: 10px;
+       max-width: 100%;
+       height: auto;
+     }
+   }
+}
+
+// .product-show .col-md-4{
+//   padding-left: 5px;
+//   padding-right: 5px;
+// }
+
+/* show page */
+div.social-share-button {
+    margin: 0 auto;
+}
+
+div.social-share-button .ssb-icon {
+    background-size: 10px 10px;
+    height: 10px;
+    width: 10px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+a.btn:hover{
+  opacity:0.5;
+  color:#fff;
+}
+
+a.btn{
+height:40px;
+font-size: 18px;
+}
+
+/* products#index */
+
+
+.product-show {
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  padding-top: 80px;
+}
+
+.product-show .introduction {
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: right;
+}
+.product-show .introduction-sub {
+  text-align: right;
+  font-size: 30px;
+}
+
+.product-show img{
+ width: 100%;
+ width: 428px;
+height: 428px;
+ // height: 200px;
+ display: inline-block;
+ vertical-align: middle;
+ -moz-transition: transform 10s;
+ -webkit-transition: transform 10s;
+}
+
+.product-show .filter {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.product-show .filter span {
+  margin-right: 20px;
+  a{
+    color: rgba(0, 0, 0, 0.5);
+  }
+  i.fa{
+    color: rgba(0, 0, 0, 0.3);
+  }
+  a:hover{
+    text-decoration: none;
+  }
+}
+
+
+.product-show .aa {
+
+.product-show .product-box {
+
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  transition: 0.35s;
+  product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  &:hover{
+    product-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
+  }
+  span{
+    font-size: 16px;
+  }
+}
+}
+
+//试试智康的这段代码
+/*------商品展示页-----*/
+.product-content img {
+    width: 100%;
+    margin: 7.5px auto 7.5px auto;
+  }
+  .product-info {
+     text-align: left;
+     line-height: 14px;
+     min-height: 55px;
+   }
+.product-box {
+  text-align: center;
+  padding: 0 0 100px 0;
+  background: #F5F5F5;
+.background-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  p{
+    color: #e74c3c !important;
+  }
+  a{
+    color: #666 !important;
+  }
+  a:hover {
+  color: #e74c3c !important; //鼠标点击商品名称反馈
   img {
     opacity: 0.8; //鼠标放在图片上的显示
   }

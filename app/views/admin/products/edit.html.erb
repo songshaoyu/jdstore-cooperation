@@ -3,8 +3,33 @@
     <div class="col-md-8">
       <h2 class="text-center">新增商品</h2>
 
+<<<<<<< HEAD
       <hr>
       <%= render "form" %>
+=======
+  <div class="group">
+    <%= f.input :quantity %>
+  </div>
+
+  <div class="group">
+    <%= f.input :price %>
+  </div>
+
+  <div class="group">
+    <!-- <%= f.select :category_id, @categories %> -->
+
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别") %>
+  </div>
+
+  <% if @product.image.present? %>
+    <span>目前商品图</span><br>
+    <%= image_tag(@product.image.thumb.url) %>
+  <% end %>
+
+  <div class="group">
+    <%= f.input :image, as: :file %>
+  </div>
+>>>>>>> master
 
     </div>
   </div>

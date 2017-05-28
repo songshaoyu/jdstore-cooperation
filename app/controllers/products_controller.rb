@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
   before_action :authenticate_user! , only: [:join, :quit]
-
   def index
     @products = case params[:order]
     when 'by_product_price'
@@ -64,13 +63,6 @@ class ProductsController < ApplicationController
 
     redirect_to product_path(@product)
   end
-
- # 点赞
-  def upvote
-  @product = Product.find(params[:id])
-  @product.upvote_by current_user
-  redirect_to :back
-end
 
 
   protected

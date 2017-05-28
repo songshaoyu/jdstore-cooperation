@@ -1,4 +1,5 @@
-<div class="row">
+<div class="container">
+ <div class="row">
   <div class="col-md-12">
 
     <h2>订单明细</h2>
@@ -8,6 +9,7 @@
         <tr>
           <th width="80">商品明细</th>
           <th>单价</th>
+          <th> 数量</th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +22,7 @@
             <td>
               <%= product_list.product_price %>
             </td>
+            <td><%= product_list.quantity %></td>
           </tr>
         <% end %>
       </tbody>
@@ -59,7 +62,7 @@
       <% if @order.order_placed? || @order.paid? %>
          <%= link_to("申请取消订单", apply_to_cancel_order_path(@order),
          method: :post, class: "btn btn-info") %>
-      <% end %>   
+      <% end %>
     </div>
   <% if !@order.is_paid? %>
     <div class="group pull-right">
@@ -71,3 +74,29 @@
   <% end %>
   </div>
 </div>
+</div>
+<!--网一严选  -->
+<!-- <div class="slide">
+<div class="view">
+<img class="j-thumb" src="http://yanxuan.nosdn.127.net/46065172b85d4bbeb649bfa4767964a6.jpg?imageView&amp;thumbnail=430x430&amp;quality=95" alt="">
+</div>
+<div class="list j-sthumbs">
+<ul>
+<li class="">
+<a href="javascript:;"><img src="http://yanxuan.nosdn.127.net/46065172b85d4bbeb649bfa4767964a6.jpg?imageView&amp;thumbnail=78x78&amp;quality=95" alt="鼠标悬停切换"></a>
+</li>
+<li class="">
+<a href="javascript:;"><img src="http://yanxuan.nosdn.127.net/be1c0672aa4f82de4179ff25c9728359.jpg?imageView&amp;thumbnail=78x78&amp;quality=95" alt="鼠标悬停切换"></a>
+</li>
+<li class="">
+<a href="javascript:;"><img src="http://yanxuan.nosdn.127.net/a0451cd98141887b78a48414d82f1a9a.jpg?imageView&amp;thumbnail=78x78&amp;quality=95" alt="鼠标悬停切换"></a>
+</li>
+<li class="">
+<a href="javascript:;"><img src="http://yanxuan.nosdn.127.net/9cdc625066ff4124e5b3dc2518529706.jpg?imageView&amp;thumbnail=78x78&amp;quality=95" alt="鼠标悬停切换"></a>
+</li>
+<li class="">
+<a href="javascript:;"><img src="http://yanxuan.nosdn.127.net/398686c2483deb75ca4afeee62250fc9.jpg?imageView&amp;thumbnail=78x78&amp;quality=95" alt="鼠标悬停切换"></a>
+</li>
+</ul>
+</div>
+ </div>

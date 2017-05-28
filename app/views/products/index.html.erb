@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container all-product-box">
     <br>
     <h3>商品总览</h3>
@@ -23,4 +24,39 @@
               <%= render :partial => "product_items", :collection => @products, :as => :product %>
             </div>
   </div>   <!--加了个盖-->
+=======
+<div class="container">
+
+
+<!-- 类别/ -->
+<div class="categoryProducts">
+  <span class="name">商品分类：</span>
+  <% Category.all.each do |category| %>
+
+    <span>
+        <%= link_to(category.name, products_path(category: category.name), :class => "categoryItem") %>
+    </span>
+  <% end %>
 </div>
+
+<!-- 排序  -->
+<div class="sorts" data-reactid=".0.0.2">
+  <span class="name">商品排序：</span>
+
+  <span><%= link_to("默认", products_path, class: "default-view categoryItem") %></span>
+
+  <span><%= link_to("价格", products_path(:order => "by_product_price"), class: "categoryItem") %></span>
+  <span><%= link_to("销量", products_path(:order => "by_product_quantity"), class: "categoryItem") %></span>
+  <!-- <span><%= link_to("上架时间",'#') %></span> -->
+
+</div>
+
+<!-- 教材 -->
+<div class="row">
+  <div id="pins" class="transitions-enabled">
+        <%= render :partial => "product_items", :collection => @products, :as => :product %>
+      </div>
+
+>>>>>>> master
+</div>
+<div>

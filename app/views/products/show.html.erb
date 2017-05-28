@@ -22,15 +22,15 @@
       ¥ <%= @product.price %>
     </div>
     <!-- 开始改动，为了实现收藏 -->
-    <div class="col-sm-6">
+    <!-- <div class="col-sm-6">
       <% if @product.quantity.present? && @product.quantity > 0 %>
         <%= link_to("加入购物车", add_to_cart_product_path(@product),method: :post, :class => "btn btn-primary btn-lg btn-danger") %>
       <% else %>
       已销售一空，无法购买
       <% end %>
-    </div>
+    </div> -->
 
-<<<<<<< HEAD
+
             <div class="product-quantity">
                   类别： <%= @product.category %>
                 </div>
@@ -140,9 +140,9 @@
                       <% end %>
                     <% end %>
                   </div>
-=======
+
     <!-- 收藏商品按钮 -->
-    <div class="col-sm-6 product-collection">
+    <!-- <div class="col-sm-6 product-collection">
          <% if current_user && current_user.is_member_of?(@product) %>
            <%= link_to("已收藏", quit_product_path(@product), method: :post, class: "btn btn-default") %>
          <% else %>
@@ -152,5 +152,4 @@
      </div>
 
   </div>
-</div>
->>>>>>> master
+</div> -->

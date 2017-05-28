@@ -7,9 +7,8 @@ class Product < ApplicationRecord
  # 收藏
   has_many :collections
   has_many :members, through: :collections, source: :user
-<<<<<<< HEAD
+
 
   has_many :reviews, dependent: :destroy
-=======
->>>>>>> master
+
 end

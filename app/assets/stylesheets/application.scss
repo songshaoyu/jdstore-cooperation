@@ -467,3 +467,62 @@ body, button, input, select, textarea, code {
     .mt30 {
         margin-top: 30px;
     }
+
+
+  // 顾客反馈
+  #customer-feedback {
+  padding-bottom: 50px;
+  background-color:#fff;
+  padding-top: 20px;
+  .col-md-4 {
+    padding: 15px 10px;
+    .quote-box-1 {
+      padding: 30px 30px;
+      background-color: #FFF;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 2em;
+      border:0.5px solid  #faf6ec;
+      margin-top:-41px;
+      position: relative;
+      z-index:1;
+      .fa{
+        color:#faf6ec;
+      }
+    }
+  }
+}
+.fd-avatar-box{
+    // border:0.5px solid  #faf6ec;
+    border-radius: 168px;
+    width: 83px;
+    height: 83px;
+    // background-color: #fff;
+    position: relative;
+
+    z-index: 14;
+    margin:0 auto;
+    .fd-avatar-box-color-overlay{
+      position: absolute;
+      background-color: none;
+      border-radius: 167px;
+      height: 83px;
+      width: 83px;
+
+    }
+    img {
+      width: 100%;
+      margin:1px auto;
+      z-index: 15;
+    }
+    // .round-image-74 {
+    //   background-color: white;
+    //   border: 1px solid  #faf6ec;
+    //   border-radius: 37px;
+    //   -moz-border-radius: 37px;
+    //   -webkit-border-radius: 37px;
+    //   height: 0px;
+    //   width: 74px;
+    //   overflow: hidden;
+    //   text-align: center;
+    // }
+}

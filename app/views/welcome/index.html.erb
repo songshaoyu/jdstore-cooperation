@@ -68,7 +68,7 @@
               <%= link_to 'products' do %><%= image_tag("item_1.jpg") %><% end %>
             </div>
             <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_2.png") %><% end %>
+              <%= link_to 'products' do %><%= image_tag("item_2.jpg") %><% end %>
             </div>
           </div>
 
@@ -77,28 +77,25 @@
               <%= link_to 'products' do %><%= image_tag("item_3.jpg") %><% end %>
             </div>
             <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_4.png") %><% end %>
+              <%= link_to 'products' do %><%= image_tag("item_4.jpg") %><% end %>
             </div>
           </div>
 
           <div class="col-md-3">
-            <div class="box three">
-              <%= link_to 'products' do %><%= image_tag("item_5.png") %><% end %>
+            <div class="box">
+              <%= link_to 'products' do %><%= image_tag("item_5.jpg") %><% end %>
             </div>
-            <div class="box three">
-              <%= link_to 'products' do %><%= image_tag("item_6.png") %><% end %>
+            <div class="box">
+              <%= link_to 'products' do %><%= image_tag("item_6.jpg") %><% end %>
             </div>
-            <div class="box three">
+          </div>
+
+          <div class="col-md-3">
+            <div class="box">
               <%= link_to 'products' do %><%= image_tag("item_7.jpg") %><% end %>
             </div>
-          </div>
-
-          <div class="col-md-3">
             <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_8.png") %><% end %>
-            </div>
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_9.png") %><% end %>
+              <%= link_to 'products' do %><%= image_tag("item_8.jpg") %><% end %>
             </div>
 
           </div>
@@ -151,6 +148,92 @@
     </div>
   </section>
 
+  <!-- 顾客反馈／start -->
+
+
+<!-- customer feedback -->
+
+<div id="customer-feedback" class="row">
+  <div class="module-name decorative text-center">
+    <span>那些常来的程序员</span>
+  </div>
+
+  <div class="col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-md-4 ">
+        <div class="fd-avatar-box text-center">
+          <div class="fd-avatar-box-color-overlay"></div>
+
+        </div>
+
+        <div class="quote-box-1">
+          <p><i class="fa fa-quote-left pull-left" aria-hidden="true"></i></p><br>
+          <p class="feedback-info text-center">
+            在伴客购买杯子，绝对是我最棒的体验了<br>
+            每个杯子都是外观美质量赞<br>
+            喝水真得变成了一种享受，谢谢伴客～<br>
+          </p>
+          <p class="feedback-info text-center" style="font-size:16px;">
+            - 顾客小萌
+          </p>
+          <p><i class="fa fa-quote-right pull-right" aria-hidden="true"></i></p>
+        </div>
+     </div>
+
+      <div class="col-md-4">
+        <div class="fd-avatar-box text-center">
+          <div class="fd-avatar-box-color-overlay"></div>
+
+        </div>
+
+        <div class="quote-box-1">
+          <p><i class="fa fa-quote-left pull-left" aria-hidden="true"></i></p><br>
+          <p class="feedback-info text-center">
+            自从买了伴客保温杯<br>
+            现在外出旅游,带一壶水可以喝一整天<br>
+            而且保温效果非常持久<br>
+          </p>
+          <p class="feedback-info text-center" style="font-size:16px;">
+            - 顾客强仔
+          </p>
+
+          <p><i class="fa fa-quote-right pull-right" aria-hidden="true"></i></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="fd-avatar-box text-center">
+          <div class="fd-avatar-box-color-overlay"></div>
+        
+        </div>
+
+        <div class="quote-box-1">
+          <p><i class="fa fa-quote-left pull-left" aria-hidden="true"></i></p><br>
+          <p class="feedback-info text-center">
+            平时是个杯子控<br>
+            但每次要找到自己喜欢的都要花很多时间<br>
+            很开心伴客解决了我的苦恼<br>
+          </p>
+          <p class="feedback-info text-center" style="font-size:16px;">
+            - 顾客晓琪
+          </p>
+          <p><i class="fa fa-quote-right pull-right" aria-hidden="true"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- end of customer feedback -->
+
+<!-- call-to-action -->
+
+<div id="call-to-action" class="row">
+  <div class="text-center">
+    <%= link_to("马上购买 <i class='fa fa-arrow-right'></i>".html_safe, products_path, class: "btn btn-default btn-lg") %>
+  </div>
+</div>
+<!-- 顾客反馈end  -->
 
   <!-- 极客优势 -->
   <section id="main-advantage">

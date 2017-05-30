@@ -25,45 +25,45 @@ Product.create!(
         price: 16,
         quantity: 45,
         category_id: 2,
-        image: open("https://ww2.sinaimg.cn/large/006tNbRwgy1fg2doh229mj306t06twff.jpg")
+        image: open("#{Rails.root}/app/assets/images/01.png")
 )
 
-Product.create!(
-      title: "冻干菠萝蜜",
-     description: "热带果园，纯正果品",
-      price: 39,
-      quantity: 10,
-      category_id: 2,
-      image: open("https://ww4.sinaimg.cn/large/006tNbRwgy1fg2dqpq367j306t06t754.jpg")
-
-)
-
-Product.create!(
-     title: "胎菊",
-     description: "桐乡胎菊，上品花茶，50克装",
-      price: 26.9,
-      quantity: 20,
-      category_id: 3,
-      image: open("https://ww1.sinaimg.cn/large/006tNbRwgy1fg2kr8y12dj306t06twff.jpg")
-
-)
- Product.create!(
-    title: "大麦茶",
-     description: "酷暑标配，去油良品, 220g",
-    price: 39,
-    quantity: 9,
-    category_id: 3,
-    image: open("https://ww1.sinaimg.cn/large/006tNbRwgy1fg2ku3zpf3j306t06tq41.jpg")
-)
-
-Product.create!(
-    title: "芒果味棉花糖麻薯",
-    description: "俘获芳心只用三层夹心",
-    price: 18,
-    quantity: 2,
-    category_id: 1,
-    image: open("http://yanxuan.nosdn.127.net/e11f3710f2ce2f49f45412c5f1acc493.png?imageView&quality=95&thumbnail=245x245")
-    )
+# Product.create!(
+#       title: "冻干菠萝蜜",
+#      description: "热带果园，纯正果品",
+#       price: 39,
+#       quantity: 10,
+#       category_id: 2,
+#       image: open("#{Rails.root}/app/assets/images/02.png")
+#
+# )
+#
+# Product.create!(
+#      title: "胎菊",
+#      description: "桐乡胎菊，上品花茶，50克装",
+#       price: 26.9,
+#       quantity: 20,
+#       category_id: 3,
+#       image: open("#{Rails.root}/app/assets/images/03.png")
+#
+# )
+#  Product.create!(
+#     title: "大麦茶",
+#      description: "酷暑标配，去油良品, 220g",
+#     price: 39,
+#     quantity: 9,
+#     category_id: 3,
+#     image: open("#{Rails.root}/app/assets/images/04.png")
+# )
+#
+# Product.create!(
+#     title: "芒果味棉花糖麻薯",
+#     description: "俘获芳心只用三层夹心",
+#     price: 18,
+#     quantity: 2,
+#     category_id: 1,
+#     image: open("#{Rails.root}/app/assets/images/05.png")
+#     )
     #  description: "俘获芳心只用三层夹心",
     # price: 18,
     # quantity: 2,

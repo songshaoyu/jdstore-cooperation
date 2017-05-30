@@ -9,23 +9,3 @@
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
-
-production:
-  qiniu_access_key: lGeaOR2kTQy3mCVQobhAQwtLJM5uuaqA6Fe-Ai3P  # 你的 qiniu AccessKey
-
-  qiniu_secret_key: iepZCc5r-0NIPpm3iuaB-YD1z35AY3RsSsH0dBLM  # 你的 qiniu SecretKey
-
-  qiniu_bucket:  jdstore-cooperation  # 你的 qiniu bucket
-
-  qiniu_bucket_domain: oqqrxvhx6.bkt.clouddn.com  # 你的 qiniu bucket domain
-
-
-
-development:
-  qiniu_access_key: lGeaOR2kTQy3mCVQobhAQwtLJM5uuaqA6Fe-Ai3P
-
-  qiniu_secret_key: iepZCc5r-0NIPpm3iuaB-YD1z35AY3RsSsH0dBLM
-
-  qiniu_bucket:  jdstore-cooperation
-
-  qiniu_bucket_domain: oqqrxvhx6.bkt.clouddn.com

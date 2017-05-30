@@ -1,268 +1,198 @@
 <!-- ↓↓↓ 大图滚动banner 代码块↓↓↓ -->
-  <div class="row">
-    <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-      <div class="overlay"></div>
-
-      <!-- 默认三张图列表 -->
-      <div class="banner">
-        <ul class="carousel-indicators ">
-          <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#bs-carousel" data-slide-to="1"></li>
-          <li data-target="#bs-carousel" data-slide-to="2"></li>
-        </ul>
+<div class="row">
+  <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <div class="overlay"></div>
+    <!-- 默认三张图列表 -->
+    <div class="banner">
+      <ul class="carousel-indicators ">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+      </ul>
+    </div>
+    <!-- 文案部分 -->
+    <div class="carousel-inner">
+      <div class="item slides active">
+        <div class="slide-1"></div>
+        <div class="hero row">
+          <hgroup>
+            <h1>你关注的 都在这里</h1>
+            <h3>用心营造 生活体验</h3>
+          </hgroup>
+          <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+        </div>
       </div>
-
-      <!-- 文案部分 -->
-      <div class="carousel-inner">
-        <div class="item slides active">
-          <div class="slide-1"></div>
-          <div class="hero row">
-            <hgroup>
-                <h1>你关注的 都在这里</h1>
-                <h3>每个程序员都有科技心 打造自己的开发环境</h3>
-            </hgroup>
-            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
-          </div>
+      <div class="item slides">
+        <div class="slide-2"></div>
+        <div class="hero">
+          <hgroup>
+            <h1>美食，不停</h1>
+            <h3>网罗精选食品 只给你一流品质</h3>
+          </hgroup>
+          <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
         </div>
-        <div class="item slides">
-          <div class="slide-2"></div>
-          <div class="hero">
-            <hgroup>
-                <h1>极客范，科技心</h1>
-                <h3>网罗科技新品 带你领略科技潮流</h3>
-            </hgroup>
-            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
-          </div>
-        </div>
-        <div class="item slides">
-          <div class="slide-3"></div>
-          <div class="hero">
-            <hgroup>
-                <h1>立即选购</h1>
-                <h3>查看更智能高效的生活工作方式</h3>
-            </hgroup>
-            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
-          </div>
-        </div>
-
+      </div>
+      <div class="item slides">
+        <div class="slide-3"></div>
+        <div class="hero">
+          <hgroup>
+            <h1>立即选购</h1>
+          <h3好心情享不停</h3>
+        </hgroup>
+        <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
       </div>
     </div>
   </div>
+</div>
+</div>
 <!-- ↑↑↑ 大图滚动banner 代码块 ↑↑↑ -->
-
-
-
-
-
-
-<!--===== 精选科技 =====-->
-  <section class="show-box">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <h2><%= t('精选科技') %></h2>
-        <div class="short-line"></div>
-        <div class="row">
-
-          <div class="col-md-3">
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_1.jpg") %><% end %>
-            </div>
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_2.jpg") %><% end %>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_3.jpg") %><% end %>
-            </div>
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_4.jpg") %><% end %>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_5.jpg") %><% end %>
-            </div>
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_6.jpg") %><% end %>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_7.jpg") %><% end %>
-            </div>
-            <div class="box">
-              <%= link_to 'products' do %><%= image_tag("item_8.jpg") %><% end %>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-    <!--===== 商品類型 =====-->
-  <section class="categories-box">
-    <div class="row">
-
-      <div class="col-md-4 category-content">
-        <%= link_to '' , class: "category_1" do %>
-          <div class="category-box">
-            <%= image_tag("目录-1.jpg") %>
-          </div>
-          <div>
-            <h3><%= t('认知升级') %></h3>
-            <p><%= t('思想和身体 总有一个要在路上 提升认知 已成为当代各行精英关注的重点 终身学习理念深入人心 身为持续进步的你 不可错过 ') %></p>
-          </div>
-        <% end %>
-      </div>
-
-      <div class="col-md-4 category-content">
-        <%= link_to '' , class: "category_2" do %>
-          <div class="category-box">
-            <%= image_tag("目录-2.jpg") %>
-          </div>
-          <div>
-            <h3><%= t('科技配件') %></h3>
-            <p><%= t('精心为程序员配选的配件 精品键盘 显示器 支架 高端科技用品 大大提升工作效率') %></p>
-          </div>
-        <% end %>
-      </div>
-
-      <div class="col-md-4 category-content">
-        <%= link_to '' , class: "category_3" do %>
-          <div class="category-box">
-            <%= image_tag("目录-3.jpg") %>
-          </div>
-          <div>
-            <h3><%= t('功能食品') %></h3>
-            <p><%= t('程序员的脑力精力损耗大 加班熬夜家常便饭，补充能量 强身醒脑的食物已成为 程序员的强大支柱 对自己好一点') %></p>
-          </div>
-        <% end %>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 顾客反馈／start -->
-
-
-<!-- customer feedback -->
-
-<div id="customer-feedback" class="row">
-  <div class="module-name decorative text-center">
-    <span>那些常来的程序员</span>
-  </div>
-
+<!--===== 精选食品 =====-->
+<section class="show-box">
+<div class="row">
   <div class="col-md-10 col-md-offset-1">
+    <h2><%= t('精选食品') %></h2>
+    <div class="short-line"></div>
     <div class="row">
-      <div class="col-md-4 ">
-        <div class="fd-avatar-box text-center">
-          <div class="fd-avatar-box-color-overlay"></div>
-
+      <div class="col-md-3">
+        <div class="box">
+          <%= link_to 'products' do %><%= image_tag("item_1.jpg") %><% end %>
         </div>
-
-        <div class="quote-box-1">
-          <p><i class="fa fa-quote-left pull-left" aria-hidden="true"></i></p><br>
-          <p class="feedback-info text-center">
-            在伴客购买杯子，绝对是我最棒的体验了<br>
-            每个杯子都是外观美质量赞<br>
-            喝水真得变成了一种享受，谢谢伴客～<br>
-          </p>
-          <p class="feedback-info text-center" style="font-size:16px;">
-            - 顾客小萌
-          </p>
-          <p><i class="fa fa-quote-right pull-right" aria-hidden="true"></i></p>
-        </div>
-     </div>
-
-      <div class="col-md-4">
-        <div class="fd-avatar-box text-center">
-          <div class="fd-avatar-box-color-overlay"></div>
-
-        </div>
-
-        <div class="quote-box-1">
-          <p><i class="fa fa-quote-left pull-left" aria-hidden="true"></i></p><br>
-          <p class="feedback-info text-center">
-            自从买了伴客保温杯<br>
-            现在外出旅游,带一壶水可以喝一整天<br>
-            而且保温效果非常持久<br>
-          </p>
-          <p class="feedback-info text-center" style="font-size:16px;">
-            - 顾客强仔
-          </p>
-
-          <p><i class="fa fa-quote-right pull-right" aria-hidden="true"></i></p>
+        <div class="box">
+          <%= link_to 'products' do %><%= image_tag("item_2.jpg") %><% end %>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="fd-avatar-box text-center">
-          <div class="fd-avatar-box-color-overlay"></div>
-        
+      <div class="col-md-3">
+        <div class="box">
+          <%= link_to 'products' do %><%= image_tag("item_3.jpg") %><% end %>
         </div>
-
-        <div class="quote-box-1">
-          <p><i class="fa fa-quote-left pull-left" aria-hidden="true"></i></p><br>
-          <p class="feedback-info text-center">
-            平时是个杯子控<br>
-            但每次要找到自己喜欢的都要花很多时间<br>
-            很开心伴客解决了我的苦恼<br>
-          </p>
-          <p class="feedback-info text-center" style="font-size:16px;">
-            - 顾客晓琪
-          </p>
-          <p><i class="fa fa-quote-right pull-right" aria-hidden="true"></i></p>
+        <div class="box">
+          <%= link_to 'products' do %><%= image_tag("item_4.jpg") %><% end %>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="box">
+          <%= link_to 'products' do %><%= image_tag("item_5.jpg") %><% end %>
+        </div>
+        <div class="box">
+          <%= link_to 'products' do %><%= image_tag("item_6.jpg") %><% end %>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="box">
+          <%= link_to 'products' do %><%= image_tag("item_7.jpg") %><% end %>
+        </div>
+        <div class="box">
+          <%= link_to 'products' do %><%= image_tag("item_8.jpg") %><% end %>
         </div>
       </div>
     </div>
   </div>
-
+</div>
+</section>
+<!-- 关于我们   -->
+<div class="row landing-page-eva">
+<div class="container">
+  <div class="col-md-12">
+    <h3 class="tagline">关于我们</h1>
+    <div class="col-xs-12 col-sm-6 col-md-6 landing-page-eva-style">
+      <div class="col-xs-3">
+        <%= image_tag("bzk.jpg", class: "img-circle img-responsive img-center frontpage-img") %>
+      </div>
+      <div class="col-xs-9">
+        <h5>柏智康</h5>
+        <p>90后学生，全栈学员，爱好运动，喜欢科技类产品，也喜欢学习新知识，作为小白，希望自己越来越有进步， 能保持一颗进取心，和积极向上的心态。</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 landing-page-eva-style">
+      <div class="col-xs-3">
+        <%= image_tag("ssy.jpg", class: "img-circle img-responsive img-center frontpage-img") %>
+      </div>
+      <div class="col-xs-9">
+        <h5>宋少羽</h5>
+        <p>没有自由时间的打工狗 希望能有自由时间，彻底 践行,学习是一种生活方式，希望能过好一辈子的头一年－－七年就是一辈子</p>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
-<!-- end of customer feedback -->
-
-<!-- call-to-action -->
-
+<!--======== 马上购买按钮 =========-->
 <div id="call-to-action" class="row">
-  <div class="text-center">
-    <%= link_to("马上购买 <i class='fa fa-arrow-right'></i>".html_safe, products_path, class: "btn btn-default btn-lg") %>
+<div class="text-center">
+  <%= link_to("马上购买 <i class='fa fa-arrow-right'></i>".html_safe, products_path, class: "btn btn-default btn-lg") %>
+</div>
+</div>
+<br>
+<br>
+<!--======== 用户反馈 =========-->
+<div class="row landing-feedback-eva">
+<section id="testimonial" class="talk-about-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+        <h2 class="section-title">用户反馈</h2>
+        <div class="short-line"></div>
+        <div id="talk-about-us" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#talk-about-us" data-slide-to="0" class="active"></li>
+            <li data-target="#talk-about-us" data-slide-to="1"></li>
+            <li data-target="#talk-about-us" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <p>生活馆不仅产品丰富，而且还能在这选择困难症时代快速地提供给我想要的，方便实惠</p>
+              <%= image_tag("user_1.png") %>
+              <strong>小华</strong>
+              <p>I have recieved my order on the same day i placed it, convenient and affordable</p>
+            </div>
+            <div class="item">
+              <p>旅行和美食，永远是活的好心情的方法，极客生活馆品类丰富，还很贴心地推送我们喜欢的食品，生活馆的贴切，再适合不过</p>
+              <%= image_tag("user_3.png") %>
+              <strong>bella</strong>
+              <p>Food Security means that all people, at all times have both physical and economic access to enough food for an active,healthy life.</p>
+            </div>
+            <div class="item">
+              <p>极客生活馆，只给你所爱 只为取悦你</p>
+              <%= image_tag("user_2.png") %>
+              <strong>lester
+              </strong>
+              <p>only for your love</p>
+              <p>
+                If it pleases you</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<!--======== end 用户反馈 =========-->
+<!--======== 最底一块 =========-->
+<div class="section text-center section-features">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="info">
+        <div class="icon icon-primary"></div>
+        <h4 class="info-title">极速配送</h4>
+        <p>每天有无数个快递员穿梭于您与商城之间。</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="info">
+        <div class="icon icon-success"></div>
+        <h4 class="info-title">美不等待</h4>
+        <p>让您随时都能淘到自己心仪的美食，第一时间尽享喜悦</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="info">
+        <div class="icon icon-warning"></div>
+        <h4 class="info-title">新鲜至上</h4>
+        <p>严格的质量把控，如有任何质量问题，我们将双倍赔偿</p>
+      </div>
+    </div>
   </div>
 </div>
-<!-- 顾客反馈end  -->
-
-  <!-- 极客优势 -->
-  <section id="main-advantage">
-    <div class="lp-advantage pt60 pb60">
-        <h2 class="title tc f22 pb50">极客优势</h2>
-        <div class="container bc">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn">
-                        <img class="lp-advantage-img" src="http://www.ship.sh/attachment/images/201508/201508281020413372.jpg">
-                        <p class="lp-advantage-title f18 mt20">急速配送</p>
-                        <p class="lp-advantage-desc f14 pl20 pr20 mt30">我们与全国多个物流公司合作，每天有无数个快递员穿梭于您与商城之间。</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
-                        <img class="lp-advantage-img" src="http://oshpgkho622162.t3.mcp.cn/style/images/sh03.jpg">
-                        <p class="lp-advantage-title f18 mt20">保证到户安装妥当</p>
-                        <p class="lp-advantage-desc f14 pl20 pr20 mt30">不用担心您的环境设置，我们将会有专业的团队协作您打造您的专属极客空间</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
-                        <img class="lp-advantage-img" src="http://www.huipi.net/images/upload/image/20140717/20140717134454_23856.jpg">
-                        <p class="lp-advantage-title f18 mt20">正品行货</p>
-                        <p class="lp-advantage-desc f14 pl20 pr20 mt30">严格的质量把控，我们只销售全新、正品、高质量的产品。如果您对商品不满意，我们提供7天无理由退换货。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </section>
+</div>

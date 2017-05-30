@@ -1,13 +1,9 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 /*
 以下是首页banner滚动大图的CSS样式包
 */
-
-
 /*  --- 大图高度 和 滚动按钮 ---  */
 .fade-carousel {                                      //滚动大图的相框高
     position: relative;
@@ -17,18 +13,18 @@
     height: 616px;
 }
 .fade-carousel .carousel-indicators > li {            //滚动按钮的设置
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     margin: 0 2px;
-    background-color: #fff;
+    background-color: #eee;
     opacity: 0.5;
 }
 .fade-carousel .carousel-indicators > li.active {     //当前滚动按钮的设置
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     opacity: 0.8;
+    background-color: #3F51B5;
 }
-
 /*  --- 标题文字设置 ---  */
 .hero {
     position: absolute;
@@ -51,11 +47,9 @@
     margin: 10px;
     padding: 0;
 }
-
 .hero h3 {                                            //h1标题设置
     letter-spacing: 0.1em;
 }
-
 .fade-carousel .carousel-inner .item .hero {          //动态出现设置
     opacity: 0;
     -webkit-transition: 2s all ease-in-out .1s;
@@ -72,7 +66,6 @@
          -o-transition: 2s all ease-in-out .1s;
             transition: 2s all ease-in-out .1s;
 }
-
 /*  --- 遮罩滤镜层 ---  */
 .overlay {                                            //遮罩滤镜层，把图片调暗，突出文案内容
     position: absolute;
@@ -82,7 +75,6 @@
     background-color: #080d15;
     opacity: 0;
 }
-
 /*  --- 按钮 ---  */
 .btn.btn-lg {padding: 10px 40px;}
 .btn.btn-hero,
@@ -94,7 +86,6 @@
     outline: none;
     margin: 20px auto;
 }
-
 /*  --- 图片 ---  */
 .fade-carousel .slides .slide-1,
 .fade-carousel .slides .slide-2,
@@ -105,15 +96,14 @@
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/Z66UL8XSEC.jpg);
+  background-image: url(https://ww4.sinaimg.cn/large/006tNbRwgy1fg208i4q71j31kw14c1ky.jpg);
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(https://ww4.sinaimg.cn/large/006tNbRwgy1fg208i4q71j31kw14c1ky.jpg);
+  background-image: url(https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/73EV0ODLNO.jpg);
 }
 .fade-carousel .slides .slide-3 {
   background-image: url(https://img13.360buyimg.com/cms/jfs/t4753/157/2509487289/220619/3d614977/5901a534Nee5e677a.jpg);
 }
-
 /*  --- 响应式设置 ---  */
 @media screen and (min-width: 980px){
     .hero { width: 980px; }
@@ -124,3 +114,87 @@
 @media screen and (max-width: 640px){
     .hero h3 { font-size: 1.5em; }
 }
+/*===== 品牌故事 ====*/
+  .landing-page-eva {
+    background-color: rgba(207,216,190,0.15);;
+    padding-bottom: 6em;
+  }
+  .landing-page-eva .tagline {                          //编写标题样式
+    text-align: center;
+    color: #666;
+    letter-spacing: 0.2em;                              //把字间距撑开，视觉感更优雅
+    font-size: 30px;                                    //品牌故事字体大小
+    margin-top: 1em;         //品牌故事距顶高度
+    margin-bottom: 2em;      //内容距底距离
+  }
+  .landing-page-eva-style {
+    margin-top: 5em;
+    text-align: justify;
+    line-height: 2em;
+  }
+/*===== 用户反馈 ====*/
+.landing-feedback-eva {
+  // background-color: #CFD8DC;  //背景颜色
+  padding-bottom: 1em;
+}
+.talk-about-us{
+    padding-bottom: 160px;
+    padding-top: 90px;
+    color: #666;        //一二三行文字颜色
+}
+h2.section-title{
+    margin-bottom: 20px;   //第一行字高度
+    font-size: 30px;       //第一行字大小
+}
+.talk-about-us strong{
+    margin-top: 25px;
+    color: #666;      //圆形图下文字颜色
+    font-size: 20px;      //圆形突下文字大小
+    font-style: italic;
+}
+.talk-about-us .item > img{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+.talk-about-us .item > p{
+    max-width: 800px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    line-height: 2;
+    margin-bottom: 20px;
+        font-size: 20px;
+}
+.talk-about-us .carousel-indicators > li {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    background-color: #eee;
+    border-radius: 3;
+}
+.talk-about-us .carousel-indicators li.active {
+    background-color: #B3E5FC;    //切换按钮选中时颜色
+}
+.talk-about-us .carousel-indicators {
+    bottom: -70px;   //按钮高度
+}
+/*===== 最底下块 ====*/
+section {
+    padding-bottom: 100px;
+  }
+  .section-features {
+    background-color: #eee;
+    padding: 60px 0 80px;
+    .info-title {
+      letter-spacing: 3px;
+    }
+    p {
+      color: #636363;
+      letter-spacing: 3px;
+      line-height: 25px;
+      text-align: left;
+    }
+  }

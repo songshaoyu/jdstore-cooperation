@@ -3,8 +3,8 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create([{ category: 'Star Wars' }, { category: 'Lord of the Rings' }])
+#   Character.create(category: 'Luke', movie: movies.first)
 
 u = User.new
 u.email = "admin@test.com"           # 可以改成自己的 email
@@ -16,47 +16,65 @@ u.password_confirmation = "123456"   # 最少要六码
 u.is_admin = true
 u.save
 
-# product
-# Product.create!(title: "吐鲁番玫瑰红葡萄干",
-#    description: "粒粒葡萄干专注为你",
-#    price: 14.9,
-#    quantity: 45,
-#    category_id: 2,
-#     particulars: "程序员都爱吃的葡萄干。
-#     果粒饱满 果肉多而无籽 体态均匀。<br><br>商品介绍<br>
-#     image: open("https://img12.360buyimg.com/n1/jfs/t2929/116/316900594/339350/eed74803/5754ed01N2878a924.jpg")",
-#    )
-
-
-Product.create!(title: "吐鲁番玫瑰红葡萄干",
-   description: "粒粒葡萄干专注为你",
-   price: 248,
-   quantity: 30,
-   category_id: 2,
-
-   particulars: "程序员都爱吃的葡萄干。
-       果粒饱满 果肉多而无籽 体态均匀。<br><br>商品介绍< img alt=\"\" src=\"https://img12.360buyimg.com/n1/jfs/t2929/116/316900594/339350/eed74803/5754ed01N2878a924.jpg\">",
-      image: open("https://img12.360buyimg.com/n1/jfs/t2929/116/316900594/339350/eed74803/5754ed01N2878a924.jpg")
-   )
+ # product
 
 Product.create!(
-       title: "黄桃罐头",
-       description: "良品铺子 黄桃果捞罐头300g*2 水果果捞新鲜糖水休闲零食小吃 黄桃果捞 300g*2",
-       price: 14.99,
-       quantity: 50,
-       category_id: 1,
-       particulars: "自然原果，新鲜晾晒。我们一只坚持给家人吃的，才卖给我们可爱的程序元吃",
-       image: open("https://img11.360buyimg.com/n1/jfs/t3118/283/7649380604/237029/4cb8d826/58b8e8d9N10bf9543.jpg")
+       title: "冻干草莓",
+       description: "温馨提示1、本品除明确质量问题外不支持30天无忧退货
+                      <br>2.冻干草莓为整颗草莓，老人小孩请在成人照顾下食用",
+        price: 16,
+        quantity: 45,
+        category_id: 2,
+        image: open("https://ww2.sinaimg.cn/large/006tNbRwgy1fg2doh229mj306t06twff.jpg")
+)
+
+Product.create!(
+      title: "冻干菠萝蜜",
+     description: "热带果园，纯正果品",
+      price: 39,
+      quantity: 10,
+      category_id: 2,
+      image: open("https://ww4.sinaimg.cn/large/006tNbRwgy1fg2dqpq367j306t06t754.jpg")
 
 )
 
 Product.create!(
-       title: "冻干榴莲干",
-       description: "百草味 零食特产水果干 金枕头榴莲干 口袋鲜果 冻干榴莲干30g/袋",
-       price: 14.99,
-       quantity: 50,
-       category_id: 1,
-       particulars: "自然原果，新鲜晾晒。我们一只坚持给家人吃的，才卖给我们可爱的程序元吃",
-       image: open("https://ww2.sinaimg.cn/large/006tNbRwly1fg26bd9mybj309q09qjss.jpg")
+     title: "胎菊",
+     description: "桐乡胎菊，上品花茶，50克装",
+      price: 26.9,
+      quantity: 20,
+      category_id: 3,
+      image: open("https://ww1.sinaimg.cn/large/006tNbRwgy1fg2kr8y12dj306t06twff.jpg")
 
 )
+ Product.create!(
+    title: "大麦茶",
+     description: "酷暑标配，去油良品, 220g",
+    price: 39,
+    quantity: 9,
+    category_id: 3,
+    image: open("https://ww1.sinaimg.cn/large/006tNbRwgy1fg2ku3zpf3j306t06tq41.jpg")
+)
+
+Product.create!(
+    title: "芒果味棉花糖麻薯",
+    description: "俘获芳心只用三层夹心",
+    price: 18,
+    quantity: 2,
+    category_id: 1,
+    image: open("http://yanxuan.nosdn.127.net/e11f3710f2ce2f49f45412c5f1acc493.png?imageView&quality=95&thumbnail=245x245")
+    )
+    #  description: "俘获芳心只用三层夹心",
+    # price: 18,
+    # quantity: 2,
+    # category_id: 1,
+    # image: open("https://ww4.sinaimg.cn/large/006tNbRwgy1fg2kuv4fb7j306t06taan.jpg")
+
+#
+# Product.create!(
+#      title: "元气生活",
+#     description: "元气生活，美丽动仁",
+#      price: 118,
+#      quantity: 7,
+#      image: open("https://ww2.sinaimg.cn/large/006tNbRwgy1fg2kyf9gdbj306t06tjsd.jpg")
+# )

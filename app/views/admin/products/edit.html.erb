@@ -1,36 +1,50 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <h2 class="text-center">新增商品</h2>
+<h2>
+  修改商品信息</h2>
 
-<<<<<<< HEAD
-      <hr>
-      <%= render "form" %>
-=======
-  <div class="group">
-    <%= f.input :quantity %>
-  </div>
+<%= simple_form_for [:admin,@product] do |f| %>
 
-  <div class="group">
-    <%= f.input :price %>
-  </div>
-
-  <div class="group">
-    <!-- <%= f.select :category_id, @categories %> -->
-
-    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别") %>
-  </div>
-
-  <% if @product.image.present? %>
-    <span>目前商品图</span><br>
-    <%= image_tag(@product.image.thumb.url) %>
-  <% end %>
-
-  <div class="group">
-    <%= f.input :image, as: :file %>
-  </div>
->>>>>>> master
-
-    </div>
-  </div>
+<div class="group">
+  <%= f.input :title %>
 </div>
+
+<div class="group">
+  <%= f.input :description %>
+</div>
+
+<div class="group">
+  <%= f.input :quantity %>
+</div>
+
+<div class="group">
+  <%= f.input :price %>
+</div>
+
+<div class="group">
+  <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别")%>
+</div>
+
+<% if @product.photos.present? %>
+<span>目前商品图</span>
+<br>
+<% @product.photos.each do |p| %>
+<%= image_tag p.avatar.thumb.url %><br>
+<% end %>
+<% end %>
+
+<div class="group">
+  <%= f.input :image, :label => "封面图片", as: :file%>
+  <%= f.label :avatar, :label => "多图上传" %><br>
+  <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]"%>
+</div>
+
+<div class="group">
+  <%= f.input :particulars, as: :wysihtml5, :label => "商品详情" %>
+</div>
+
+<%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+<% end %>
+
+<script type="text/javascript">
+  autosize($('#product_description'))
+</script>

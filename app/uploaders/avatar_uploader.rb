@@ -1,33 +1,28 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
    include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  # storage :file
+  storage :file
   # storage :fog
-  if Rails.env.production? #远端
-    storage :qiniu
-  elsif Rails.env.production? #本地
-    storage :file
 
-  end
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process resize_to_fit: [800, 800]
+  process resize_to_fill: [800, 800]
 
-  version :thumb do
-    process resize_to_fill: [160, 160]
-  end
+    version :thumb do
+      process resize_to_fill: [200,200]
+    end
 
-  version :medium do
-    process resize_to_fill: [430, 430]
-  end
+    version :medium do
+      process resize_to_fill: [430,430]
+    end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
@@ -60,5 +55,5 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-  self.qiniu_can_overwrite = true
+
 end

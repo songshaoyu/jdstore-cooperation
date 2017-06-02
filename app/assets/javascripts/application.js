@@ -15,6 +15,8 @@
 //= require masonry/jquery.masonry
 
 //= require bootstrap
+//= require bootstrap-wysihtml5
+//= require bootstrap-wysihtml5/locales/zh-CN
 //= require_tree .
 
 

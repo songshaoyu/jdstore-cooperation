@@ -1,36 +1,33 @@
 <div class="container product-show">
   <div class="row">
     <div class="col-md-6">
-      <!-- 商品小图 --->
-                <div class="intro-bigPic border pr">
-                  <div class="magnifier-preview border" id="preview"></div>
-                  <% if @photos.present? %>
-                        <img
-                          id="medium"
-                          src="<%= @photos.first.avatar.medium.url %>"
-                          data-large-img-wrapper="preview"
-                          data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+          <!-- 商品小图 --->
+          <div class="intro-bigPic border pr">
+            <div class="magnifier-preview border" id="preview"></div>
+            <% if @photos.present? %>
+            <!-- <a class="magnifier-thumb-wrapper" href="javascript:;"> -->
+            <img id="medium" src="<%= @photos.first.avatar.medium.url %>" data-large-img-wrapper="preview" data-large-img-url="<%= @photos.first.avatar.medium.url %>">
 
-                  <% end %>
-                </div>
-       <!--商品大图  -->
-              <ul class="intro-preview clearfix">
-                <% if @photos.present? %>
-                 <% @photos.each_with_index do |p, index| %>
-                   <% if index == 0 %>
-                      <li class="border intro-preview-item intro-preview-activeItem fl">
+            <% end %>
+          </div>
+          <!--商品大图  -->
+          <ul class="intro-preview clearfix">
+            <% if @photos.present? %>
+            <% @photos.each_with_index do |p, index| %>
+            <% if index == 0 %>
+            <li class="border intro-preview-item intro-preview-activeItem fl">
 
-                   <% else %>
-                      <li class="border intro-preview-item fl">
-                   <% end %>
+            <% else %>
+            <li class="border intro-preview-item fl">
+              <% end %>
 
-                   <% if index < 5 %>
-                     <%= image_tag p.avatar.url %>
-                <% end %>
-                     </li>
-                <% end %>
-               <% end %>
-             </ul>
+              <% if index < 5 %>
+              <%= image_tag p.avatar.medium.url %>
+              <% end %>
+            </li>
+            <% end %>
+            <% end %>
+          </ul>
     </div>
     <div class="col-md-6">
       <h2><%= @product.title %></h2>

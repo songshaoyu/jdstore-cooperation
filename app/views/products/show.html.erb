@@ -1,28 +1,28 @@
 <div class="container product-show">
   <div class="row">
     <div class="col-md-6">
-          <!-- 商品小图 --->
+          <!-- 商品大图 --->
           <div class="intro-bigPic border pr">
             <div class="magnifier-preview border" id="preview"></div>
             <% if @photos.present? %>
-             <a class="magnifier-thumb-wrapper" href="javascript:;">
-                <img id="thumb"
+             <a class="magnifier-thumb-wrapper" href="#">
+                <img class="jqzoom"
                      src="<%= @photos.first.avatar.medium.url %>"
                      data-large-img-wrapper="preview"
-                     data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+                     rel="<%= @photos.first.avatar.medium.url %>">
                </a>
             <% end %>
 
           </div>
-          <!--商品大图  -->
-          <ul class="intro-preview clearfix">
+          <!--商品小图  -->
+          <ul class="intro-preview clearfix"  id="thumblist">
             <% if @photos.present? %>
             <% @photos.each_with_index do |p, index| %>
             <% if index == 0 %>
-            <li class="border intro-preview-item intro-preview-activeItem fl">
-
+            <li class="tb-selected border intro-preview-item intro-preview-activeItem fl">
+            </li>
             <% else %>
-            <li class="border intro-preview-item fl">
+            <li class="tb-selected border intro-preview-item fl">
               <% end %>
 
               <% if index < 5 %>
@@ -161,7 +161,7 @@
     <% @reviews.each do |review| %>
     <div class="reviews">
       <ul>
-        <li>
+        <li >
           <div class="row">
             <div class="col-sm-9 review-user-email"><%= review.user.email %></div>
             <div class="col-sm-3"><%= review.created_at.strftime("%Y-%m-%d %H-%M-%S") %></div>
@@ -178,3 +178,14 @@
     <% end %>
     <% end %>
   </div>
+
+
+<script type="text/javascript">
+$(".jqzoom").imagezoom();
+         $("#thumblist li").hover(function () {
+           $(this).addClass("tb-selected").siblings().removeClass("tb-selected");
+           $(".jqzoom").attr('src', $(this).find("img").attr("mid"));
+           $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
+         },);
+
+</script>

@@ -17,6 +17,8 @@
 //= require bootstrap
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales/zh-CN
+
+
 //= require_tree .
 
 
@@ -66,15 +68,15 @@ $(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
 })
 //fangdajing
 // 放大镜
-$('#preview').css('visibility', 'hidden')
-var evt = new Event(),
-    m = new Magnifier(evt);
-m.attach({
-    thumb: '#thumb',
-    large: $('.intro-preview-activeItem img').attr('src'),
-    largeWrapper: 'preview',
-    zoom: 2
-})
+// $('#preview').css('visibility', 'hidden')
+// var evt = new Event(),
+//     m = new Magnifier(evt);
+// m.attach({
+//     thumb: '#thumb',
+//     large: $('.intro-preview-activeItem img').attr('src'),
+//     largeWrapper: 'preview',
+//     zoom: 2
+// })
 
 //yueyan
 (function($) {

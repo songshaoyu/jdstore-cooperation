@@ -9,18 +9,18 @@
                 <img class="jqzoom"
                      src="<%= @photos.first.avatar.medium.url %>"
                      data-large-img-wrapper="preview"
-                     rel="<%= @photos.first.avatar.medium.url %>">
+                        rel="<%= @photos.first.avatar.url %>">
                </a>
             <% end %>
 
           </div>
           <!--商品小图  -->
-          <ul class="intro-preview clearfix"  id="thumblist">
+          <ul class="intro-preview clearfix" >
             <% if @photos.present? %>
             <% @photos.each_with_index do |p, index| %>
             <% if index == 0 %>
-            <li class="tb-selected border intro-preview-item intro-preview-activeItem fl">
-            </li>
+            <li class="border intro-preview-item intro-preview-activeItem fl">
+
             <% else %>
             <li class="tb-selected border intro-preview-item fl">
               <% end %>
@@ -182,10 +182,10 @@
 
 <script type="text/javascript">
 $(".jqzoom").imagezoom();
-         $("#thumblist li").hover(function () {
-           $(this).addClass("tb-selected").siblings().removeClass("tb-selected");
-           $(".jqzoom").attr('src', $(this).find("img").attr("mid"));
-           $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
-         },);
+        //  $("#thumblist li").hover(function () {
+        //    $(this).addClass("tb-selected").siblings().removeClass("tb-selected");
+        //    $(".jqzoom").attr('src', $(this).find("img").attr("mid"));
+        //    $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
+        //  },);
 
 </script>

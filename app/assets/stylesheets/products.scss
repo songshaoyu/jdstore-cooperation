@@ -35,28 +35,28 @@
      border: 1px solid #DDDDDD;
  }
 
-// .magnifier-preview {
-//     position: absolute;
-//     width: 418px;
-//     height: 420px;
-//     left: 418px;
-//     top: -1px;
-//     padding: 0;
-//     z-index: 1;
-//     overflow: hidden;
-//     visibility: hidden;
-// }
-//
-// .magnifier-thumb-wrapper {
-//     position: relative;
-//     display: block;
-//     top: 0;
-//     left: 0;
-// }
-//
-// .intro-preview .intro-preview-activeItem {
-//     border-color: #DB3652;
-// }
+.magnifier-preview {
+    position: absolute;
+    width: 418px;
+    height: 420px;
+    left: 418px;
+    top: -1px;
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.magnifier-thumb-wrapper {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.intro-preview .intro-preview-activeItem {
+    border-color: #DB3652;
+}
 
 .fr {
     float: right;
@@ -519,3 +519,32 @@ height: 428px;
 // #thumb-lens {
 //      background-size: 415px 415px !important;
 //  }
+
+
+// 月颜大神
+div.zoomDiv {
+z-index: 999;
+position: absolute;
+top: 0;
+left: 0;
+width: 420px;
+height: 420px;
+background: #ffffff;
+border: 1px solid #f2f2f2;
+display: none;
+text-align: center;
+overflow: hidden;
+}
+div.zoomMask {
+  position: absolute;
+  background: url(/images/mask.png) repeat scroll 0 0 transparent;
+  cursor: move;
+  z-index: 1;
+}
+
+// .border .intro-preview-activeItem .fl:hover{
+//   border: 1px solid #DB3652;;
+// }
+.intro-preview-item:hover{
+  border: 1px solid #DB3652;;
+}

@@ -26,7 +26,7 @@
               <% end %>
 
               <% if index < 5 %>
-              <%= image_tag p.avatar.medium.url %>
+              <%= image_tag(p.avatar.medium.url, :big => p.avatar.url)  %>
               <% end %>
             </li>
             <% end %>
@@ -180,12 +180,13 @@
   </div>
 
 
-<script type="text/javascript">
-$(".jqzoom").imagezoom();
-        //  $("#thumblist li").hover(function () {
-        //    $(this).addClass("tb-selected").siblings().removeClass("tb-selected");
-        //    $(".jqzoom").attr('src', $(this).find("img").attr("mid"));
-        //    $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
-        //  },);
+  <script type="text/javascript">
+  $(".jqzoom").imagezoom();
+  $('.intro-preview.clearfix').on('mouseover','.intro-preview-item',function () {
+  var src = $(this).find('img').attr('src')
+  var big = $(this).find('img').attr('big')
+  $(".jqzoom").attr('src', src);
+  $(".jqzoom").attr('rel', big);
+  })
 
-</script>
+  </script>

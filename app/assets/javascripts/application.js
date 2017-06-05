@@ -64,3 +64,14 @@ $(document).on('mouseover', '.magnifier-thumb-wrapper', function (e) {
 $(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
     $('#preview').css('visibility', 'hidden')
 })
+//fangdajing
+// 放大镜
+$('#preview').css('visibility', 'hidden')
+var evt = new Event(),
+    m = new Magnifier(evt);
+m.attach({
+    thumb: '#thumb',
+    large: $('.intro-preview-activeItem img').attr('src'),
+    largeWrapper: 'preview',
+    zoom: 2
+})

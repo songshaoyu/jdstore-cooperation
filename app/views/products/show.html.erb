@@ -5,10 +5,14 @@
           <div class="intro-bigPic border pr">
             <div class="magnifier-preview border" id="preview"></div>
             <% if @photos.present? %>
-            <!-- <a class="magnifier-thumb-wrapper" href="javascript:;"> -->
-            <img id="medium" src="<%= @photos.first.avatar.medium.url %>" data-large-img-wrapper="preview" data-large-img-url="<%= @photos.first.avatar.medium.url %>">
-
+             <a class="magnifier-thumb-wrapper" href="javascript:;">
+                <img id="thumb"
+                     src="<%= @photos.first.avatar.medium.url %>"
+                     data-large-img-wrapper="preview"
+                     data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+               </a>
             <% end %>
+
           </div>
           <!--商品大图  -->
           <ul class="intro-preview clearfix">
@@ -59,7 +63,7 @@
 
        <!-- 商品类别-->
        <div class="product-quantity">
-         类别： <%= @product.category.name if @product.category %> 
+         类别： <%= @product.category.name if @product.category %>
        </div>
      </div>
 

@@ -308,13 +308,23 @@ margin-top: 15px;
 
       margin: 10px;
      width: 210px;
-     product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
      text-align: left;
    padding: 0px;
+   transition: 0.35s;
+
      img {
        margin-right: 10px;
        max-width: 100%;
        height: auto;
+     }
+     &:hover{
+  
+       box-shadow: 2px 2px 9px 0px rgba(145, 151, 151, 0.22);
+
+       .productList-item-cartBtn {
+     display: block;
+   }
      }
    }
 }

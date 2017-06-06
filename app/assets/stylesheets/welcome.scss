@@ -198,3 +198,50 @@ section {
       text-align: left;
     }
   }
+
+  //首页购物车
+//   .fig{
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+//   position: absolute;
+//   width: 100%;
+//   height:40px;
+//   cursor: pointer;
+//   text-align: center;
+//   font-size: 1.2em;
+//   transition: all 0.2s ease-out;
+//   // display: none
+// }
+
+.border {
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+}
+
+.productList-item-cartBtn {
+    top: 168px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: none;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+
+}
+
+.pa {
+    position: absolute;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+a {
+    color: #6D6D6D;
+}

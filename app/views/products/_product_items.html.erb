@@ -1,7 +1,7 @@
 
-    <div id="pins" class="transitions-enabled">
+    <div id="pins" class="transitions-enabled productList-item">
 
-      <div class="product-box">
+      <div class="product-box productList-item-pic ">
         <%= link_to product_path(product) do %>
           <% if product.image.present? %>
           <%= image_tag(product.image.url, :class => "thumbnail") %>

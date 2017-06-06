@@ -54,9 +54,9 @@
     left: 0;
 }
 
-.intro-preview .intro-preview-activeItem {
-    border-color: #DB3652;
-}
+// .intro-preview .intro-preview-activeItem {
+//     border-color: #DB3652;
+// }
 
 .fr {
     float: right;
@@ -201,9 +201,9 @@ margin-top: 15px;
    height: 70px;
  }
 }
-.intro-preview-activeItem {
- border-color: #DB3652;
-}
+// .intro-preview-activeItem {
+//  border-color: #DB3652;
+// }
 }
 
 
@@ -319,7 +319,7 @@ margin-top: 15px;
        height: auto;
      }
      &:hover{
-  
+
        box-shadow: 2px 2px 9px 0px rgba(145, 151, 151, 0.22);
 
        .productList-item-cartBtn {

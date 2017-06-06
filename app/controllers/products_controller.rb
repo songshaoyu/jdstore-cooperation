@@ -1,15 +1,22 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
   before_action :authenticate_user! , only: [:join, :quit]
+
+
   def index
-    @products = case params[:order]
-    when 'by_product_price'
-      Product.all.order("price DESC")
-    when 'by_product_quantity'
-      Product.all.order('quantity DESC')
-    else
-      Product.all.recent
+    if params[:category].present?
+     @category_id = Category.find_by(name: params[:category]).id
+     @products = Product.where(:category_id => @category_id).order("created_at DESC")
+   else
+      @products = case params[:order]
+      when 'by_product_price'
+        Product.all.order("price DESC")
+      when 'by_product_quantity'
+        Product.all.order('quantity DESC')
+      else
+        Product.all.recent
     end
+   end
   end
 
   def show

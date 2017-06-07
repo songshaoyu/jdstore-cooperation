@@ -14,14 +14,14 @@
           ¥ <%= product.price %>
           <!-- add_to_cart -->
 
-          <% if product.quantity > 0 %>
-           <%= link_to add_to_cart_product_path(product), :method => :post, class: "addCartBtn productList-item-cartBtn pa border f18", :remote => true do %>
+          <% if product.quantity.present? && product.quantity > 0 %>
+           <%= link_to add_to_cart_product_path(product), :method => :post, class: "addCartBtn productList-item-cartBtn pa border f18", :respont => true do %>
              <i class="fa fa-shopping-cart col-red"></i>
-           <% end %>
+             <% end %>
+             <% else %>
+               <a href="#" class="btn btn-danger active" role="button" disabled="disabled">库存缺货ing...</a>
          <% end %>
-         <% if product.quantity <= 0 %>
-           <p class="productList-item-sellout f20 tc">已售完</p>
-         <% end %>
+
       </div>
 
     </div>

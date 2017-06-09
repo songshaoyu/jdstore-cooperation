@@ -74,8 +74,10 @@
        </div>
      </div>
    </div>
-
+   <!--wechat  -->
+    <%= social_share_button_tag(@product.title, :allow_sites => %w(facebook twitter google_plus wechat weibo), :image => @product.photos.first.avatar.medium.url , desc: @product.description) %>
    <!-- 按钮区域 -->
+   <hr>
    <div class="add-to-cart-buttom row">
      <!-- 加入购物车按钮 -->
      <div class="col-sm-6">

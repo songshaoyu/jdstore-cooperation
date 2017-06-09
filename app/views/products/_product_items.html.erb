@@ -1,7 +1,7 @@
 
-    <div id="pins" class="transitions-enabled">
+    <div id="pins" class="transitions-enabled productList-item">
 
-      <div class="product-box">
+      <div class="product-box productList-item-pic ">
         <%= link_to product_path(product) do %>
           <% if product.image.present? %>
           <%= image_tag(product.image.url, :class => "thumbnail") %>
@@ -12,7 +12,16 @@
         <%= product.title %>
         <br>
           ¥ <%= product.price %>
-      </div>
+          <!-- add_to_cart -->
 
+          <% if product.quantity.present? && product.quantity > 0 %>
+           <%= link_to add_to_cart_product_path(product), :method => :post, class: "addCartBtn productList-item-cartBtn pa border f18", :respont => true do %>
+             <i class="fa fa-shopping-cart col-red"></i>
+             <% end %>
+             <% else %>
+               <a href="#" class="btn btn-danger active" role="button" disabled="disabled">库存缺货ing...</a>
+         <% end %>
+
+      </div>
 
     </div>

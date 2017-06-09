@@ -99,10 +99,10 @@
   background-image: url(https://ww4.sinaimg.cn/large/006tNbRwgy1fg208i4q71j31kw14c1ky.jpg);
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/73EV0ODLNO.jpg);
+  background-image: url(https://ww3.sinaimg.cn/large/006tNc79gy1fge937nh7kj30hs07fmxb.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(https://img13.360buyimg.com/cms/jfs/t4753/157/2509487289/220619/3d614977/5901a534Nee5e677a.jpg);
+  background-image: url(https://ww4.sinaimg.cn/large/006tNc79gy1fgf7fprn7rj30yb0g3798.jpg);
 }
 /*  --- 响应式设置 ---  */
 @media screen and (min-width: 980px){
@@ -198,3 +198,49 @@ section {
       text-align: left;
     }
   }
+
+  //首页购物车
+//   .fig{
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+//   position: absolute;
+//   width: 100%;
+//   height:40px;
+//   cursor: pointer;
+//   text-align: center;
+//   font-size: 1.2em;
+//   transition: all 0.2s ease-out;
+//   // display: none
+// }
+
+.border {
+    border: 1px solid #DDDDDD;
+}
+
+.productList-item-cartBtn {
+    top: 168px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: none;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+
+}
+
+.pa {
+    position: absolute;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+a {
+    color: #6D6D6D;
+}

@@ -31,9 +31,9 @@
     padding-left: 0px;
 }
 
-.border {
-    border: 1px solid #DDDDDD;
-}
+ .border {
+     border: 1px solid #DDDDDD;
+ }
 
 .magnifier-preview {
     position: absolute;
@@ -54,9 +54,9 @@
     left: 0;
 }
 
-.intro-preview .intro-preview-activeItem {
-    border-color: #DB3652;
-}
+// .intro-preview .intro-preview-activeItem {
+//     border-color: #DB3652;
+// }
 
 .fr {
     float: right;
@@ -181,14 +181,37 @@
 .show-page {
     width: 1200px;
 }
+.intro-bigPic {
+width: 420px;
+height: 420px;
+img {
+ width: 100%;
+}
+}
 
+.intro-preview {
+margin-top: 15px;
+.intro-preview-item {
+ padding: 1px;
+ margin-right: 13px;
+ overflow: hidden;
+ img {
+   width: 100%;
+   width: 70px;
+   height: 70px;
+ }
+}
+// .intro-preview-activeItem {
+//  border-color: #DB3652;
+// }
+}
 
 
 
 // 商品价格样式
 .product-price-bgcolor {
 
-  background-color: #f5f3ef;  //价格框背景颜色
+  background-color: #f5f3f4;  //价格框背景颜色
 
 
 
@@ -285,13 +308,23 @@
 
       margin: 10px;
      width: 210px;
-     product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
      text-align: left;
    padding: 0px;
+   transition: 0.35s;
+
      img {
        margin-right: 10px;
        max-width: 100%;
        height: auto;
+     }
+     &:hover{
+
+       box-shadow: 2px 2px 9px 0px rgba(145, 151, 151, 0.22);
+
+       .productList-item-cartBtn {
+     display: block;
+   }
      }
    }
 }
@@ -388,17 +421,17 @@ height: 428px;
   margin-bottom: 10px;
   font-size: 20px;
   transition: 0.35s;
-  product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-  &:hover{
-    product-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
-  }
+  // product-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  // &:hover{
+  //   product-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
+  // }
   span{
     font-size: 16px;
   }
 }
 }
 
-//试试智康的这段代码
+
 /*------商品展示页-----*/
 .product-content img {
     width: 100%;
@@ -429,4 +462,35 @@ height: 428px;
     opacity: 0.8; //鼠标放在图片上的显示
   }
 }
+}
+
+
+
+// 放大镜
+div.zoomDiv {
+z-index: 999;
+position: absolute;
+top: 0;
+left: 0;
+width: 420px;
+height: 420px;
+background: #ffffff;
+border: 1px solid #f2f2f2;
+display: none;
+text-align: center;
+overflow: hidden;
+margin-left: 10px;
+}
+div.zoomMask {
+  position: absolute;
+  background: url(/images/mask.png) repeat scroll 0 0 transparent;
+  cursor: move;
+  z-index: 1;
+}
+
+// .border .intro-preview-activeItem .fl:hover{
+//   border: 1px solid #DB3652;;
+// }
+.intro-preview-item:hover{
+  border: 1px solid #DB3652;;
 }

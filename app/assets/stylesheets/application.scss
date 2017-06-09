@@ -514,15 +514,66 @@ body, button, input, select, textarea, code {
       margin:1px auto;
       z-index: 15;
     }
-    // .round-image-74 {
-    //   background-color: white;
-    //   border: 1px solid  #faf6ec;
-    //   border-radius: 37px;
-    //   -moz-border-radius: 37px;
-    //   -webkit-border-radius: 37px;
-    //   height: 0px;
-    //   width: 74px;
-    //   overflow: hidden;
-    //   text-align: center;
-    // }
+
+}
+
+// shaoyu kaishi youhua
+.show-box h3:before {
+    content: '';
+    border-top: .5px solid #d0d3d9;
+    width: 115px;
+    position: absolute;
+    margin-left: -120px;
+    top: 14px;
+}
+.show-box h3:after {
+    content: '';
+    border-top: .5px solid #d0d3d9;
+    width: 115px;
+    position: absolute;
+    margin-left: 3px;
+    top: 14px;
+}
+.show-box h3 {
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+    color: #464d5c;
+
+}
+.show-box {
+    position: relative;
+    background-color: #f6f6f6;
+    background: url(https://data.zi.com/5ebc0030c51be36dde1eb1e87a143dc9.svg) repeat 0 5px;
+    -webkit-font-smoothing: antialiased;
+}
+// 首页－－购买
+.buy-box {
+  /* 区块 */
+  text-align: center;
+  padding: 75px 0 0 0;
+  height: 200px;
+  background: url(/images/show.jpg) no-repeat scroll top center/ cover; //背景图片
+
+}
+/* 按钮 */
+.btn-push {
+  background-color: transparent;
+  color: #eee;
+  background-color: rgba(145,151,151,0.7); //半透明背景
+  padding: 10px 20px;
+  font-size: 20px;
+
+  /* 显示特效 */
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+/* 按钮-鼠标滑动效果 */
+.btn-push:hover {
+  background-color: rgba(252,252,252,0.8);
+  border-color: #0070DE;
 }

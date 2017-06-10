@@ -212,7 +212,7 @@ $(function() {
 
 // go toTop
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 1000) {
+  if ($(this).scrollTop() > 1200) {
     $(".goTop").fadeIn(100);
   } else {
     $(".goTop").fadeOut(200);
